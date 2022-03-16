@@ -20,6 +20,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 body{
     font-family: 'Shippori Antique B1', sans-serif;
     font-size: 16px;
@@ -32,6 +34,11 @@ a{
     text-decoration: none;
 }
 
+
+
+
+/* -----Start of header----- */
+
 .header{
     background-color: rgb(236, 195, 119);
     position: fixed;
@@ -42,16 +49,19 @@ a{
     justify-content: space-around;
 }
 .navBar__Image{
-    width: 4em;
+    width: 3em;
     border-radius: 100%;
 }
 .navBar__Items{
     display: flex;
 }
-.navBar a,h1{
+.navBar h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.static{
+    background-color: orange;
 }
 .navBar .navBar__List{
     padding: 0px 1em;
@@ -62,11 +72,12 @@ a{
     border: 1px solid white;
     background-color: orange;
 }
-.logo{
-    width: 4em;
-    border-radius: 100%;
-}
-/* start of main */
+
+
+
+
+/* -----start of main----- */
+
 .main__Description{
     display: grid;
     grid-template-columns: repeat(4,25%);
@@ -159,6 +170,25 @@ a{
     border: 1px solid white;
     background-color: orange;
 }
+.form .poll{/* form class */
+    background-color: red;
+    padding: 10em 15em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.poll__Date{
+    height: 16em;
+    background-color: #efdca8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+
+
 
 /* start of footer */
 
