@@ -45,7 +45,7 @@ body{
 /* -----Start of header----- */
 
 .header{
-    /* background-color: rgb(236, 195, 119); */
+    background-image: linear-gradient(orange, white);
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -83,13 +83,17 @@ body{
     border-radius: 5px;
 }
 .navBar .navBar__List:hover{
-    border: 1px solid white;
-    background-color: orange;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 .log__in{
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
-
+    padding: 0px 1em;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.log__in:hover{
+    background-image: linear-gradient(orange, white);
 }
 
 
@@ -227,6 +231,7 @@ body{
 /* start of footer */
 
 .footer{
+    background-image: linear-gradient(to top,orange, white);
     background-color: #fff;
     border:1px solid orange;
     display: flex;
