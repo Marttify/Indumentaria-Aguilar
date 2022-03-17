@@ -21,6 +21,7 @@
     box-sizing: border-box;
 }
 
+/* Realizar un @query--------------------------------- */
 
 /* body{
     font-family: 'Shippori Antique B1', sans-serif;
@@ -42,7 +43,7 @@ body{
 
 
 
-/* -----Start of header----- */
+/* Start of header */
 
 .header{
     background-image: linear-gradient(orange, white);
@@ -99,7 +100,7 @@ body{
 
 
 
-/* -----start of main----- */
+/* start of main */
 
 .main__Description{
     display: grid;
