@@ -49,7 +49,11 @@ body{
     text-decoration: none;
     color: inherit;
 }
-
+.flex__Column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 /* Start of header */
 
@@ -74,7 +78,7 @@ body{
     display: none;
 }
 
-.navBar__Image{
+.navBar a img{
     width: 4em;
     border-radius: 100%;
 }
@@ -101,7 +105,12 @@ body{
 .navBar .navBar__List:hover{
     border-bottom: 2px solid black;
     border-top: 2px solid black;
+    transition: 0.5s;
 }
+.icon{
+    font-size: 3rem;
+}
+
 .log__in{
     padding: 0px 1em;
     margin: 5px 10px;
@@ -109,9 +118,23 @@ body{
     border: 2px solid black;
 }
 .log__in:hover{
-    background-image: linear-gradient(var(--secondary), white);
+    background-image: linear-gradient(to top,var(--secondary), white);
 }
 
+/* sub menu */
+.navBar .navBar__Icon .navBar__SubMenu{
+    border: 1px solid black;
+    text-align: left;
+    padding: 1rem;
+}
+.navBar .navBar__Icon .navBar__SubMenu a{
+    padding: 1em;
+}
+.navBar .navBar__Icon{
+    background: none;
+    border: none;
+    display: none;
+}
 
 
 /* start of main */
@@ -155,6 +178,9 @@ body{
     background-color: rgb(236, 195, 119);
     border-radius: 1em;
     padding: 2em;
+}
+.text h2{
+    font-size: 18px;
 }
 .text button{
     border-radius: 1em;
@@ -301,39 +327,79 @@ body{
 
 
 
-/* Realizar un @query--------------------------------- */
-@media (max-width: 960px){
+/*   Realizar un @query   */
+
+@media (max-width: 768px){
+    .header{
+        font-size: 60px;
+    }
     .navBar__Two{
         display: none;
     }
-    .sub__Menu{
-        display: block;
-        align-content: center;
-        /* position: absolute; */
+    .navBar a img{
+        font-size: 11px;
+    }  
+    .navBar .navBar__Icon .navBar__SubMenu{
+        display: none;
     }
-    .sub__Menu:hover{
-        border: 1px solid black;
-    }
-    
-    .sub__Menu i{
-        border: var(--primary);
-    }
-    .navBar__Image{
-        width: 2em;
-    }
-    .navBar__Items{
-        width: 10em;
-        height: 20%;
-        margin-top: 2em;
-        padding: auto;
-        border: 2px solid red;
-        position: fixed;
-        display: inline-block;
+    .navBar .navBar__Icon:hover .navBar__SubMenu {
+        margin: auto;
+        display: flex;
         flex-direction: column;
-        background: none;
+        display: inline-block;
+        text-align: center;
+        position: fixed;
+        left: 50%;
+        top: 68px;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        background-image: linear-gradient(to top,var(--secondary), white);
     }
-    .sub__Menu:hover{
-        background-image: linear-gradient(orange, white);
+    .navBar .navBar__Icon .navBar__SubMenu .navBar__List{
+        font-size: 30px;
+        padding: 1em auto;
+        margin: 25px;
+    }
+    .navBar .navBar__Icon{
+        background: none;
+        border: none;
+        display: block;
+    }
+    .navBar .navBar__Icon i{
+        font-size: 2rem;
+        padding: 2px 7px;
+    }
+    .log__in:hover{
+        padding: 5em;
+        background-image: linear-gradient(var(--secondary), white);
+        transition: 0.5s;
+    }
+
+
+
+
+    /* start of main */
+    .main__Album{
+        padding: 0px 25em;
+        margin: auto;
+        flex-wrap: wrap ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .text h2{
+        font-size: 11px;
+        margin: 15px auto;
+    }
+    .text h4{
+        margin: 15px auto;
+    }
+    .frame img{
+        width: 100%;
     }
     
 }
