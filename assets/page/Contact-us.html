@@ -9,34 +9,48 @@
     <script src="https://kit.fontawesome.com/19c7f2fb8c.js" crossorigin="anonymous"></script>
 </head>
 <body> 
-        <!-- start of header -->
+    <!-- start of header -->
 
-        <header class="header">
-            <nav class="navBar">
-                <a href="../../index.html"><img class="navBar__Image" src="../image/logotipo.png" alt="Logo de Orange"></a>
-                <div class="navBar__Two">
-                    <div class="navBar__Items">
-                        <a class="navBar__List" href="#">
-                            <i class="fa-solid fa-user-plus"></i>
-                            To open
-                        </a>
-                        <a class=" log__in" href="Iniciar-Sesion.html">
-                            <i class="fa-solid fa-user"></i>
-                            log in
-                        </a>
-                    </div>
-    
-                    <div class="navBar__Items">
-                        <a class="navBar__List" href="Formulario.html">Form</a>
-                        <a class="navBar__List" href="#">Service</a>
-                        <a class="navBar__List" href="Trabajos.html">Proyectos</a>
-                        <a class="navBar__List" href="Contactanos.html">Contact us</a>
-                    </div>
+    <header class="header">
+        <nav class="navBar">
+            <a href="../../index.html"><img src="../image/logotipo.png" alt="Logo de Orange"></a>
+            
+            <button class="navBar__Icon">
+                <i class="fa-solid fa-bars icon"></i>
+                <ul class="navBar__SubMenu flex__Column">
+                    <a class="navBar__List" href="Formulario.html">Form</a>
+                    <a class="navBar__List" href="#">Service</a>
+                    <a class="navBar__List" href="Trabajos.html">Proyectos</a>
+                    <a class="navBar__List" href="Contactanos.html">Contact us</a>
+                    <a class="log__in none" href="/assets/page/Iniciar-Sesion.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </ul>
+            </button>
+            
+            <div class="navBar__Two">
+                <div class="navBar__Items">
+                    <a class="navBar__List" href="#">
+                        <i class="fa-solid fa-user-plus"></i>
+                        To open
+                    </a>
+                    <a class=" log__in" href="/assets/page/Iniciar-Sesion.html">
+                        <i class="fa-solid fa-user icon__subMenu"></i>
+                        log in
+                    </a>
                 </div>
-            </nav>
-        </header> 
+
+                <div class="navBar__Items">
+                    <a class="navBar__List" href="assets/page/Formulario.html">Form</a>
+                    <a class="navBar__List" href="#">Service</a>
+                    <a class="navBar__List" href="assets/page/Trabajos.html">Proyectos</a>
+                    <a class="navBar__List" href="assets/page/Contactanos.html">Contact us</a>
+                </div>
+            </div>
+        </nav>
+    </header> 
     
-        <!-- the end of the header -->
+    <!-- the end of the header -->
 
 
 
