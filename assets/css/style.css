@@ -2,8 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@300;500;700&display=swap");
 
-/* Variables */
 
+/* Variables */
 :root {
     --principal: #0b0c0d;
     --secondary: orange;
@@ -12,7 +12,6 @@
 }
 
 /* Normalize */
-
 *,
 *::after,
 *::before {
@@ -43,6 +42,7 @@ body{
     font-size: 16px;
     writing-mode: horizontal-tb;
 }
+
 /* helpers */
 .none{ /* Eliminar bordes que utilice en el index, color y linea de texto*/
     border: none;
@@ -54,9 +54,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+.big{
+    padding: 2px 47%;
+    font-size: 20px;
+}
 
 /* Start of header */
-
 .header{
     background-image: linear-gradient(var(--secondary), white);
     position: fixed;
@@ -79,7 +82,7 @@ body{
 }
 
 .navBar a img{
-    width: 3em;
+    width: 4em;
     border-radius: 100%;
     line-height: 62px;
 }
@@ -140,7 +143,6 @@ body{
 
 
 /* start of main */
-
 .main__Description{
     display: grid;
     grid-template-columns: repeat(4,25%);
@@ -186,7 +188,7 @@ body{
 }
 .text button{
     border-radius: 1em;
-    border: 1px solid white;
+    border: 1px solid black;
     height: 2em;
     width: auto;
 }
@@ -276,12 +278,57 @@ body{
     text-align: center;
 }
 
-
+/* start of main in the service page */
+.service{
+    padding: 10%;
+    background-color: var(--secondary);
+    margin: 0 30rem;
+}
+.service__SubMenu{
+    font-size: 25px;
+    width: max-content;
+}
+.service__SubMenu .subMenu{
+    background-color: black;
+    width: max-content;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 1rem;
+}
+.service .service__SubMenu .service__SubMenu--Nav{
+    list-style-type: none;
+    display: none;
+    margin-left: 9em;
+    position: fixed;
+    background-color: black;
+    padding-top: 1em;
+}
+.service .service__SubMenu .service__SubMenu--Nav li{
+    padding: 2px 1rem;
+    border: 1px solid black;
+    width: max-content;
+    border-radius: 3px;
+    color: white;
+}
+.service .service__SubMenu .service__SubMenu--Nav li a:hover{
+    border-bottom: 2px solid white;
+}
+.service__SubMenu:hover .service__SubMenu--Nav{
+    display: block;
+}
+.service__Container{
+    margin: 5rem 2rem;
+}
+.service__Container h2,p{
+    margin: 1rem;
+}
+iframe{
+    margin: 10rem auto;
+}
 
 
 
 /* start of footer */
-
 .footer{
     background-image: linear-gradient(to top,var(--secondary), white);
     background-color: #fff;
@@ -302,7 +349,6 @@ body{
 
 
 /* start of the page contact*/
-
 .contact{
     background-color: var(--secondary);
     display: grid;
@@ -339,7 +385,6 @@ body{
 
 
 /*   Realizar un @query   */
-
 @media (max-width: 768px){
     .header{
         font-size: 60px;
@@ -353,7 +398,7 @@ body{
     .navBar .navBar__Icon .navBar__SubMenu{
         display: none;
     }
-    .navBar .navBar__Icon:hover .navBar__SubMenu {
+    .navBar .navBar__Icon:hover .navBar__SubMenu{
         margin: auto;
         display: flex;
         flex-direction: column;
