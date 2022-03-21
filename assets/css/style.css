@@ -44,7 +44,7 @@ body{
 }
 
 /* helpers */
-.none{ /* Eliminar bordes que utilice en el index, color y linea de texto*/
+.none{ 
     border: none;
     text-decoration: none;
     color: inherit;
@@ -54,10 +54,15 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-.big{
-    padding: 2px 47%;
-    font-size: 20px;
+.color{
+    background-image: none;
 }
+.tracing{
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+
 
 /* Start of header */
 .header{
@@ -143,6 +148,8 @@ body{
 
 
 /* start of main */
+
+/* Index */
 .main__Description{
     display: grid;
     grid-template-columns: repeat(4,25%);
@@ -156,41 +163,23 @@ body{
     justify-content: center;
     padding-top: 6em;
 }
-.none{ /* Eliminar bordes que utilice en el index, color y linea de texto*/
-    border: none;
-    text-decoration: none;
-    color: var(--primary);
-}
-.main__Album{
-    padding: 0px 25em;
-    margin: auto;
-    flex-wrap: wrap ;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2em;
-}
-.main__Album img{
-    width: 15em;
-    border-radius: 2em;
-}
 .text{
-    display: flex;
     grid-area: text;
+    align-items: center;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-image: linear-gradient(var(--secondary), white);
     border-radius: 1em;
-    padding: 2em;
-}
-.text h2{
-    font-size: 18px;
+    padding: 1em;
+    border: 2px solid orange;
 }
 .text button{
     border-radius: 1em;
     border: 1px solid black;
     height: 2em;
-    width: auto;
+    width: 50%;
+    margin: auto;
 }
 .text button a{
     padding: auto;
@@ -201,25 +190,14 @@ body{
 }
 .frame{
     grid-area: frame;
-    display: flex; 
-    
+
 }
 .frame img{
     width: 100%;
     border-radius: 1em;
+    border: 2px solid orange ;
     /* transform: translate(12px, 20px); */
     /* Realizar un sombreado a la imagen principal-------------------------------- */
-}
-.subtitle{
-    margin: auto;
-    padding: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-}
-.color{
-    background-image: none;
-
 }
 .section{
     grid-area: section;
@@ -228,11 +206,18 @@ body{
     padding: 2em;
     text-align: center;
     margin-bottom: 15em;
+    border: 2px solid orange ;
 }
-.section__Work{
+
+
+
+
+
+/* proyect */
+.section__Proyect{
     margin: 15em 10em;
 }
-.section__link h1{
+.section__Proyect--Link h1{
     padding: 1em 5em;
     width: max-content;
     display: flex;
@@ -240,11 +225,58 @@ body{
     margin: 0% auto 2em;
     border-radius: 2em;
 }
-.section__link h1:hover{
+.section__Proyect--Link h1:hover{
     border: 1px solid white;
     background-color: var(--secondary);
 }
-.form .poll{/* form class */
+.section__Proyect--Album{
+    padding: 0px 25em;
+    margin: auto;
+    flex-wrap: wrap ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+.section__Proyect--Album img{
+    width: 15em;
+    border-radius: 2em;
+}
+.section__Proyect--Subtitle{
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+.section__Proyect--Link{
+    margin: 15em 10em;
+}
+.section__Proyect--Link h1{
+    padding: 1em 5em;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 0% auto 2em;
+    border-radius: 2em;
+}
+.section__Proyect--Link h1:hover{
+    border: 1px solid white;
+    background-color: var(--secondary);
+}
+/* Class reutiliti: 
+_  main__Description.
+_  text
+_  frame
+_  none
+*/
+
+
+
+
+
+/* Start of Form  */
+.form .form__Poll{/* form class */
     padding: 5em 0em;
     display: flex;
     flex-direction: column;
@@ -255,34 +287,66 @@ body{
     margin: auto;
     border: 1px solid white;
 }
-.poll__Date{
+.form__Poll--Data{
     height: 16em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    
 }
-.poll__Date .Interes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-.data{
+.form__Poll--Data label input{
     width: 50%;
     height: 2em;
     text-align: center;
 }
-.data2{
+.form__Poll--Options{
+    height: 16em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
+    margin: auto;
+    height: max-content;
 }
+.form__Poll--Options h2{
+    margin: 2rem;
+}
+.form__Poll--Options #Interes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.form__Poll--Options label input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20%;
+    margin: 1rem auto;
+}
+.form__Poll--Button{
+    margin-top: 5rem;
+}
+.form__Poll--Button button a{
+    padding: 5px auto;
+    font-family: var(--font-primary);
+}
+/* Class utiliti
+_ 
+*/
 
-/* start of main in the service page */
+
+
+
+
+
+
+/* service */
 .service{
     padding: 10%;
     background-color: var(--secondary);
-    margin: 0 30rem;
+    margin: auto;
+    width: min-content;
 }
 .service__SubMenu{
     font-size: 25px;
@@ -293,7 +357,8 @@ body{
     width: max-content;
     color: white;
     border-radius: 5px;
-    padding: 2px 1rem;
+    padding: 5px 1rem;
+    text-align: center;
 }
 .service .service__SubMenu .service__SubMenu--Nav{
     list-style-type: none;
@@ -323,8 +388,16 @@ body{
     margin: 1rem;
 }
 iframe{
-    margin: 10rem auto;
+    text-align: center;
+    width: 100%;
+    margin: 3rem auto;
 }
+/* class utiliti
+_ section__Proyect--Link
+ */
+
+
+
 
 
 
@@ -345,10 +418,16 @@ iframe{
 .link{
     margin-top: 5em;
 }
+.footer__Link:hover a{
+    border-bottom: 2px solid black;
+}
 
 
 
-/* start of the page contact*/
+
+
+
+/* contact */
 .contact{
     background-color: var(--secondary);
     display: grid;
@@ -381,6 +460,10 @@ iframe{
 .margin{/* agrando margen para colocar el footer en el fondo de la pagina*/
     margin-top: 7em;
 }
+
+
+
+
 
 
 
@@ -435,27 +518,33 @@ iframe{
 
 
     /* start of main */
-    .main__Album{
-        padding: 0px 25em;
-        margin: auto;
-        flex-wrap: wrap ;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .main__Description{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "text"
+        "frame"
+        "section";
+        text-align: center;
+        border: 2px solid white;
         gap: 2em;
+        justify-content: center;
+        padding-top: 6em;
     }
     .text{
-        font-size: 10px;
-    }
-    .text h2{
-        font-size: 11px;
-        margin: 15px auto;
-    }
-    .text h4{
-        margin: 15px auto;
+        margin: 2rem;
+        border: 2px solid orange ;
+
     }
     .frame img{
-        width: 100%;
+        width: 80%;
+        margin: 2rem;
+        border: 2px solid orange;
     }
-    
+    .section{
+        border: 2px solid orange;
+        margin: 2rem;
+    }
+
 }
