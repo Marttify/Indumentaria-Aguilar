@@ -39,6 +39,10 @@ a{
 body{
     background-color: #fff;
 }
+
+
+
+
 /* helpers */
 .none{ 
     border: none;
@@ -83,7 +87,6 @@ body{
     width: 4em;
     display: none;
 }
-
 .navBar a img{
     width: 4em;
     border-radius: 100%;
@@ -126,7 +129,6 @@ body{
 .log__in:hover{
     background-image: linear-gradient(to top,var(--secondary), white);
 }
-
 /* sub menu */
 .navBar .navBar__Icon .navBar__SubMenu{
     border: 1px solid black;
@@ -281,7 +283,7 @@ _  none
     "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
     "contenedor-2 contenedor-2 contenedor-4 contenedor-4" 
     "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
-    "contenedor-5 contenedor-5 contenedor-6 contenedor-6"
+    "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
     ;
     text-align: center;
     gap: 1rem;
@@ -337,17 +339,6 @@ _  none
 
 
 }
-.contenedor-5{
-    grid-area: contenedor-5;
-    background-image: linear-gradient(to left,orange, white);
-    border-radius: 1rem;
-
-}
-.contenedor-6{
-    grid-area: contenedor-6;
-    background-image: linear-gradient(orange, white);
-    border-radius: 1rem;
-}
 /* Class utiliti
 _ 
 */
@@ -358,62 +349,64 @@ _
 
 
 
-/* service */
-.service{
-    padding: 10%;
-    background-color: var(--secondary);
-    margin: auto;
-    width: min-content;
-}
-.service__SubMenu{
-    font-size: 25px;
-    width: max-content;
-}
-.service__SubMenu .subMenu{
-    background-color: black;
-    width: max-content;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 1rem;
+/* Service */
+.grid__Form{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:
+    "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
+    "contenedor-2 contenedor-2 contenedor-4 contenedor-4" 
+    "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
+    "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
+    ;
     text-align: center;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    margin: 0 3rem;
+    height: 100rem;
 }
-.service .service__SubMenu .service__SubMenu--Nav{
-    list-style-type: none;
-    display: none;
-    margin-left: 9em;
-    position: fixed;
-    background-color: black;
-    padding-top: 1em;
+.contenedor-1{
+    background-image: linear-gradient(orange, white);
+    grid-area: contenedor-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5rem;
+    font-size: 30px;
+    border-radius: 1rem;
 }
-.service .service__SubMenu .service__SubMenu--Nav li{
-    padding: 2px 1rem;
-    border: 1px solid black;
-    width: max-content;
-    border-radius: 3px;
-    color: white;
+.contenedor-2{
+    background-image: linear-gradient(to top,orange, white);
+    grid-area: contenedor-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+
 }
-.service .service__SubMenu .service__SubMenu--Nav li a:hover{
-    border-bottom: 2px solid white;
+.contenedor-3{
+    background-image: linear-gradient(orange, white);
+    grid-area: contenedor-3;
+    border-radius: 1rem;
 }
-.service__SubMenu:hover .service__SubMenu--Nav{
-    display: block;
+.contenedor-4{
+    grid-area: contenedor-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+    background-image: linear-gradient(orange, white);
+    border-radius: 1rem;
 }
-.service__Container{
-    margin: 5rem 2rem;
-}
-.service__Container h2,p{
-    margin: 1rem;
-}
-iframe{
-    text-align: center;
+.contenedor-2 iframe{
     width: 100%;
-    margin: 3rem auto;
 }
-/* class utiliti
-_ section__Proyect--Link
- */
-
-
+.contenedor-3 ul iframe{
+    width: 100%;
+}
 
 
 
@@ -569,14 +562,13 @@ _ section__Proyect--Link
     .grid__Area{
         display: grid;
         grid-template-columns: repeat(4,25%);
-        grid-template-rows: repeat(6,auto);
+        grid-template-rows: repeat(4,auto);
         grid-template-areas:
         "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
         "contenedor-4 contenedor-4 contenedor-4 contenedor-4" 
         "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
         "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
         "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
-        "contenedor-5 contenedor-5 contenedor-6 contenedor-6"
         ;
         height: max-content;
     }
@@ -597,7 +589,6 @@ _ section__Proyect--Link
     }
     .contenedor-3{
         grid-area: contenedor-3;
-
     }
     .contenedor-4{
         grid-area: contenedor-4;
@@ -609,13 +600,58 @@ _ section__Proyect--Link
     .contenedor-4 label{
         margin: 1rem;
     }
-    .contenedor-5{
-        grid-area: contenedor-5;
 
+
+
+
+
+
+    .grid__Form{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
+        "contenedor-4 contenedor-4 contenedor-4 contenedor-4" 
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
+        "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+        ;
+        height: max-content;
     }
-    .contenedor-6{
-        grid-area: contenedor-6;
-
+    .contenedor-1{
+        grid-area: contenedor-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5rem;
+        font-size: 30px;
+    }
+    .contenedor-2{
+        grid-area: contenedor-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .contenedor-3{
+        grid-area: contenedor-3;
+    }
+    .contenedor-4{
+        grid-area: contenedor-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem;
+    }
+    .contenedor-3 iframe{
+        width: 100%;
+    }
+    .contenedor-2 iframe{
+        width: 100%;
+    }
+    .contenedor-4 label{
+        margin: 1rem;
     }
 
 }
