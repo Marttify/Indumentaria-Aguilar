@@ -56,6 +56,9 @@ body{
 .tracing{
     border-bottom: 2px solid orange;
 }
+.border{
+    border: 1px solid orange;
+}
 
 
 
@@ -288,42 +291,62 @@ _  none
     height: 100rem;
 }
 .contenedor-1{
-    background-color: red;
+    background-image: linear-gradient(orange, white);
     grid-area: contenedor-1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 5rem;
     font-size: 30px;
+    border-radius: 1rem;
 }
 .contenedor-2{
-    background-color: orange;
+    background-image: linear-gradient(to top,orange, white);
     grid-area: contenedor-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
 
+}
+.contenedor-2 ul{
+    list-style-type: none;
 }
 .contenedor-3{
-    background-color: blue;
+    background-image: linear-gradient(orange, white);
     grid-area: contenedor-3;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.contenedor-3 ul{
+    text-align: center;
+    list-style-type: none;
+    margin: auto;
 }
 .contenedor-4{
-    background-color: aquamarine;
     grid-area: contenedor-4;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 5rem;
+    background-image: linear-gradient(orange, white);
+    border-radius: 1rem;
+
 
 }
 .contenedor-5{
-    background-color: yellow;
     grid-area: contenedor-5;
+    background-image: linear-gradient(to left,orange, white);
+    border-radius: 1rem;
 
 }
 .contenedor-6{
-    background-color: dodgerblue;
     grid-area: contenedor-6;
-
+    background-image: linear-gradient(orange, white);
+    border-radius: 1rem;
 }
 /* Class utiliti
 _ 
@@ -539,6 +562,60 @@ _ section__Proyect--Link
     .section{
         border: 2px solid orange;
         margin: 2rem;
+    }
+
+
+
+    .grid__Area{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas:
+        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
+        "contenedor-4 contenedor-4 contenedor-4 contenedor-4" 
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
+        "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+        "contenedor-5 contenedor-5 contenedor-6 contenedor-6"
+        ;
+        height: max-content;
+    }
+    .contenedor-1{
+        grid-area: contenedor-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5rem;
+        font-size: 30px;
+    }
+    .contenedor-2{
+        grid-area: contenedor-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .contenedor-3{
+        grid-area: contenedor-3;
+
+    }
+    .contenedor-4{
+        grid-area: contenedor-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem;
+    }
+    .contenedor-4 label{
+        margin: 1rem;
+    }
+    .contenedor-5{
+        grid-area: contenedor-5;
+
+    }
+    .contenedor-6{
+        grid-area: contenedor-6;
+
     }
 
 }
