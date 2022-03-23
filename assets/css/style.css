@@ -437,9 +437,8 @@ _
 
 
 
-/* contact */
+/* Contact-us */
 .contact{
-    background-color: var(--secondary);
     display: grid;
     grid-column: 2/4;
     display: flex;
@@ -447,7 +446,7 @@ _
     margin: 15em 5em;
     padding: 2em;
     border-radius: 2em;
-    border: 1px solid white;
+    border: 1px solid orange;
 }
 .contact__Data{
     display: flex;
