@@ -1,0 +1,20 @@
+/* start of footer */
+.footer{
+    background-image: linear-gradient(to top,var(--secondary), white);
+    background-color: #fff;
+    border:1px solid orange;
+    display: flex;
+    justify-content: center;
+    & .footer__Link{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 1em;
+        & :hover a{
+            border-bottom: 2px solid black;
+        }
+    }
+    & .link{
+        margin-top: 5em;
+    }
+}

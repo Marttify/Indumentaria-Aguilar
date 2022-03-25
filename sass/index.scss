@@ -1,0 +1,20 @@
+
+// misc
+@import "misc/variables";
+@import "misc/normalize";
+@import "sass/misc/mixins";
+@import "sass/misc/query";
+
+// artials
+@import "sass/artials/header";
+@import "sass/artials/footer";
+
+// views
+@import "views/home";
+@import "views/service";
+@import "sass/views/proyectos";
+@import "sass/views/contact-us";
+@import "sass/views/log-in";
+@import "sass/views/form";
+
+

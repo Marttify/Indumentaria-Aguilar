@@ -1,0 +1,142 @@
+
+
+/* Start of index*/
+
+.header{
+    background-color: $secondary;
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    & .navBar{
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        & a img{
+            width: 4em;
+            border-radius: 100%;
+            line-height: 62px;
+        }
+        & h1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        & .navBar__Two, .navBar__Icon{
+            display: flex;
+            flex-direction: column;
+            & .navBar__Items{
+                margin: 0px;
+                padding: 0%;
+                display: flex;
+                justify-content: end;
+                & .navBar__List{
+                    color: $principal;
+                    display: inline-block;
+                    padding: 0px 1em;
+                    margin: 5px 10px;
+                    &:hover{
+                        border-bottom: 2px solid orange;
+                        transition: 0.2s;
+                        color: $principal;
+                    }
+                }
+                & .log__in{
+                    padding: 0px 1em;
+                    margin: 5px 10px;
+                    border-radius: 5px;
+                    border: 2px solid black;
+                    &:hover{
+                        background-color: $secondary;
+                    }
+                }
+                & a{
+                    padding: 1em;
+                }
+            }
+            & .navBar__SubMenu{
+                border: 1px solid black;
+                text-align: left;
+                padding: 1rem;
+                & .log__in{
+                    padding: 0px 1em;
+                    margin: 5px 10px;
+                    border-radius: 5px;
+                    border: 2px solid black;
+                    &:hover{
+                        background-color: $secondary;
+                    }
+                }
+                & a{
+                    padding: 1em;
+                }
+            }
+        }
+        & .sub__Menu{
+            background: none;
+            border: none;
+            width: 4em;
+            display: none;
+        }
+        & .navBar__Icon{
+            display: none;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .header{
+        font-size: 60px;
+        & .navBar{
+            & a img{
+                font-size: 11px;
+            }
+            & .navBar__Two{
+                display: none;
+            }
+            & .navBar__Icon{
+                display: block;
+                background: none;
+                border: none;
+                & .navBar__List{
+                    font-size: 30px;
+                    padding: 1em auto;
+                    margin: 25px;
+                }
+                & .log__in{
+                    &:hover{
+                        padding: 5em;
+                        background-image: linear-gradient($secondary, white);
+                        transition: 0.5s;
+                    }
+                }
+                & i{
+                    font-size: 2rem;
+                    padding: 2px 7px;
+                }
+                & .navBar__SubMenu{
+                    display: none;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    display: inline-block;
+                    text-align: center;
+                    position: fixed;
+                    left: 50%;
+                    top: 68px;
+                    height: calc(100% - 60px);
+                    overflow-y: auto;
+                    background-image: linear-gradient(to top,$secondary, white);
+                    & .log__in{
+                        &:hover{
+                            padding: 5em;
+                            background-image: linear-gradient(var$secondary, white);
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
