@@ -200,44 +200,62 @@ body {
       display: none; }
 
 @media (max-width: 768px) {
-  .header {
-    font-size: 60px; }
-    .header .navBar a img {
-      font-size: 11px; }
-    .header .navBar .navBar__Two {
-      display: none; }
-    .header .navBar .navBar__Icon {
-      display: block;
-      background: none;
-      border: none; }
-      .header .navBar .navBar__Icon .navBar__List {
-        font-size: 30px;
-        padding: 1em auto;
-        margin: 25px; }
-      .header .navBar .navBar__Icon .log__in:hover {
-        padding: 5em;
-        background-image: linear-gradient(white, white);
-        transition: 0.5s; }
-      .header .navBar .navBar__Icon i {
-        font-size: 2rem;
-        padding: 2px 7px; }
-      .header .navBar .navBar__Icon .navBar__SubMenu {
-        display: none;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        display: inline-block;
+  .header .navBar a img {
+    font-size: 11px; }
+  .header .navBar .navBar__Two {
+    display: none; }
+  .header .navBar .navBar__Icon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 0;
+    border: none;
+    background-color: white; }
+    .header .navBar .navBar__Icon .icon {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 2rem;
+      padding: 2px 7px; }
+      .header .navBar .navBar__Icon .icon:hover .navBar__SubMenu {
+        display: block; }
+    .header .navBar .navBar__Icon .navBar__SubMenu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      margin-top: 2rem;
+      position: fixed;
+      left: 50%;
+      top: 1rem;
+      height: calc(100% - 60px);
+      overflow-y: auto; }
+      .header .navBar .navBar__Icon .navBar__SubMenu :hover {
+        display: block; }
+      .header .navBar .navBar__Icon .navBar__SubMenu .navBar__List {
+        font-size: 25px;
+        padding: 10px auto;
+        margin: 1rem; }
+      .header .navBar .navBar__Icon .navBar__SubMenu .log__in {
         text-align: center;
-        position: fixed;
-        left: 50%;
-        top: 68px;
-        height: calc(100% - 60px);
-        overflow-y: auto;
-        background-image: linear-gradient(to top, white, white); }
+        border-radius: 1px solid black;
+        margin-bottom: 3rem; }
         .header .navBar .navBar__Icon .navBar__SubMenu .log__in:hover {
-          padding: 5em;
-          background-image: linear-gradient(var white, white);
-          transition: 0.5s; } }
+          background-image: linear-gradient(white, white);
+          transition: 0.5s; }
+    .header .navBar .navBar__Icon :hover .navBar__SubMenu {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      display: inline-block;
+      text-align: center;
+      position: fixed;
+      left: 50%;
+      top: 68px;
+      height: calc(100% - 60px);
+      overflow-y: auto;
+      background-image: linear-gradient(to top, var(--secondary), white); } }
 
 /* start of footer */
 .footer {

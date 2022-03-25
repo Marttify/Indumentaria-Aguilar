@@ -87,7 +87,7 @@
 
 @media (max-width: 768px){
     .header{
-        font-size: 60px;
+        // font-size: 60px;
         & .navBar{
             & a img{
                 font-size: 11px;
@@ -96,27 +96,53 @@
                 display: none;
             }
             & .navBar__Icon{
-                display: block;
-                background: none;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: auto 0;
                 border: none;
-                & .navBar__List{
-                    font-size: 30px;
-                    padding: 1em auto;
-                    margin: 25px;
-                }
-                & .log__in{
-                    &:hover{
-                        padding: 5em;
-                        background-image: linear-gradient($secondary, white);
-                        transition: 0.5s;
-                    }
-                }
-                & i{
+                background-color: white;
+                & .icon{
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     font-size: 2rem;
                     padding: 2px 7px;
+                    &:hover .navBar__SubMenu{
+                        display: block;
+                    }
                 }
                 & .navBar__SubMenu{
                     display: none;
+                    position: absolute;
+                    background-color: white;
+                    margin-top: 2rem;
+                    position: fixed;
+                    left: 50%;
+                    top: 1rem;
+                    height: calc(100% - 60px);
+                    overflow-y: auto;
+                    & :hover{
+                        display: block;
+                    }
+                    & .navBar__List{
+                        font-size: 25px;
+                        padding: 10px auto;
+                        margin: 1rem;
+                    }
+                    & .log__in{
+                        text-align: center;
+                        border-radius: 1px solid black;
+                        margin-bottom: 3rem;
+                        &:hover{
+                            background-image: linear-gradient($secondary, white);
+                            transition: 0.5s;
+                        }
+                    }   
+                }
+                & :hover .navBar__SubMenu{
                     margin: auto;
                     display: flex;
                     flex-direction: column;
@@ -127,14 +153,7 @@
                     top: 68px;
                     height: calc(100% - 60px);
                     overflow-y: auto;
-                    background-image: linear-gradient(to top,$secondary, white);
-                    & .log__in{
-                        &:hover{
-                            padding: 5em;
-                            background-image: linear-gradient(var$secondary, white);
-                            transition: 0.5s;
-                        }
-                    }
+                    background-image: linear-gradient(to top,var(--secondary), white);
                 }
             }
         }
