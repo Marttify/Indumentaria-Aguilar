@@ -5,16 +5,17 @@
     grid-template-rows: repeat(4,auto);
     grid-template-areas:
     "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-    "contenedor-2 contenedor-2 contenedor-4 contenedor-4" 
-    "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
-    "contenedor-3 contenedor-3 contenedor-4 contenedor-4"
+    "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
+    "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+    "contenedor-4 contenedor-4 contenedor-4 contenedor-4"
     ;
+    max-width: 1080px;
     text-align: center;
     gap: 1rem;
     justify-content: center;
     padding-top: 6em;
     padding-bottom: 6em;
-    margin: 0 3rem;
+    margin: auto;
     height: 100rem;
 
     & .contenedor-1{
@@ -40,6 +41,9 @@
         background-image: linear-gradient(orange, white);
         grid-area: contenedor-3;
         border-radius: 1rem;
+        & .buttom{
+            background-color: black;
+        }
     }
     & .contenedor-4{
         grid-area: contenedor-4;

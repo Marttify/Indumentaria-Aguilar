@@ -29,111 +29,6 @@ a {
 body {
   background-color: #fff; }
 
-/* helpers */
-.none {
-  border: none;
-  text-decoration: none;
-  color: inherit; }
-
-.flex__Column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.color {
-  background-image: none; }
-
-.tracing {
-  border-bottom: 2px solid orange; }
-
-.border {
-  border: 1px solid orange; }
-
-/* @query   */
-@media (max-width: 768px) {
-  .main__Description {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "text" "frame" "section";
-    text-align: center;
-    border: 2px solid white;
-    gap: 2em;
-    justify-content: center;
-    padding-top: 6em; }
-    .main__Description .text {
-      margin: 2rem;
-      border: 2px solid orange; }
-    .main__Description .frame img {
-      width: 80%;
-      margin: 2rem;
-      border: 2px solid orange; }
-    .main__Description .section {
-      border: 2px solid orange;
-      margin: 2rem; }
-  .grid__Area {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4"  "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
-    height: max-content; }
-    .grid__Area .contenedor-1 {
-      grid-area: contenedor-1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 5rem;
-      font-size: 30px; }
-    .grid__Area .contenedor-2 {
-      grid-area: contenedor-2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem; }
-    .grid__Area .contenedor-3 {
-      grid-area: contenedor-3; }
-    .grid__Area .contenedor-4 {
-      grid-area: contenedor-4;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 5rem; }
-    .grid__Area .contenedor-4 label {
-      margin: 1rem; }
-  .grid__Form {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4"  "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
-    height: max-content; }
-    .grid__Form .contenedor-1 {
-      grid-area: contenedor-1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 5rem;
-      font-size: 30px; }
-    .grid__Form .contenedor-2 {
-      grid-area: contenedor-2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem; }
-    .grid__Form .contenedor-3 {
-      grid-area: contenedor-3; }
-    .grid__Form .contenedor-4 {
-      grid-area: contenedor-4;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 5rem; }
-    .grid__Form .contenedor-3 iframe {
-      width: 100%; }
-    .grid__Form .contenedor-2 iframe {
-      width: 100%; }
-    .grid__Form .contenedor-4 label {
-      margin: 1rem; } }
-
 /* Start of index*/
 .header {
   background-color: white;
@@ -141,6 +36,8 @@ body {
   width: 100%;
   border-bottom: 2px solid orange; }
   .header .navBar {
+    max-width: 1080px;
+    margin: auto;
     color: black;
     display: flex;
     justify-content: space-around; }
@@ -148,10 +45,6 @@ body {
       width: 4em;
       border-radius: 100%;
       line-height: 62px; }
-    .header .navBar h1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
     .header .navBar .navBar__Two, .header .navBar .navBar__Icon {
       display: flex;
       flex-direction: column; }
@@ -258,21 +151,42 @@ body {
       background-image: linear-gradient(to top, var(--secondary), white); } }
 
 /* start of footer */
-.footer {
+.footer-2 {
   background-image: linear-gradient(to top, var(--secondary), white);
   background-color: #fff;
   border: 1px solid orange;
   display: flex;
   justify-content: center; }
-  .footer .footer__Link {
+  .footer-2 .footer__Link {
     display: flex;
     text-align: center;
     justify-content: center;
     padding: 1em; }
-    .footer .footer__Link :hover a {
+    .footer-2 .footer__Link :hover a {
       border-bottom: 2px solid black; }
-  .footer .link {
+  .footer-2 .link {
     margin-top: 5em; }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "contenedor-1 contenedor-2 contenedor-3 contenedor-4";
+  padding: 1rem;
+  background-color: white;
+  border-top: 2px solid orange;
+  display: flex;
+  justify-content: space-between; }
+  .footer .contenedor-1 {
+    grid-area: contenedor-1; }
+  .footer .contenedor-2 {
+    grid-area: contenedor-2; }
+  .footer .contenedor-3 {
+    grid-area: contenedor-3; }
+  .footer .contenedor-4 {
+    grid-area: contenedor-4; }
+    .footer .contenedor-4 a img {
+      width: 50px; }
 
 /* home */
 .main__Description {
@@ -379,13 +293,14 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-4 contenedor-4"  "contenedor-3 contenedor-3 contenedor-4 contenedor-4" "contenedor-3 contenedor-3 contenedor-4 contenedor-4";
+  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3" "contenedor-4 contenedor-4 contenedor-4 contenedor-4";
+  max-width: 1080px;
   text-align: center;
   gap: 1rem;
   justify-content: center;
   padding-top: 6em;
   padding-bottom: 6em;
-  margin: 0 3rem;
+  margin: auto;
   height: 100rem; }
   .grid__Form .contenedor-1 {
     background-image: linear-gradient(orange, white);
@@ -407,6 +322,8 @@ body {
     background-image: linear-gradient(orange, white);
     grid-area: contenedor-3;
     border-radius: 1rem; }
+    .grid__Form .contenedor-3 .buttom {
+      background-color: black; }
   .grid__Form .contenedor-4 {
     grid-area: contenedor-4;
     display: flex;
@@ -446,19 +363,21 @@ body {
     margin: 2em; }
 
 /* Start of Form  */
-.grid__Area {
+.grid__Form {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-4 contenedor-4"  "contenedor-3 contenedor-3 contenedor-4 contenedor-4" "contenedor-3 contenedor-3 contenedor-4 contenedor-4";
+  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-form contenedor-form contenedor-3"  "contenedor-4 contenedor-form contenedor-form contenedor-5" "contenedor-4 contenedor-form contenedor-form contenedor-5";
+  max-width: 1080px;
   text-align: center;
   gap: 1rem;
   justify-content: center;
   padding-top: 6em;
-  margin: 0 3rem;
-  height: 100rem; }
-  .grid__Area .contenedor-1 {
-    background-image: linear-gradient(orange, white);
+  margin: auto;
+  margin-bottom: 5rem; }
+  .grid__Form .contenedor-1 {
+    background-image: url(/assets/image/titulo-2.png);
+    color: white;
     grid-area: contenedor-1;
     display: flex;
     flex-direction: column;
@@ -466,32 +385,104 @@ body {
     padding: 5rem;
     font-size: 30px;
     border-radius: 1rem; }
-  .grid__Area .contenedor-2 {
-    background-image: linear-gradient(to top, orange, white);
+  .grid__Form .contenedor-2 {
     grid-area: contenedor-2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 5rem;
+    background-color: #fff;
     border-radius: 1rem; }
-  .grid__Area .contenedor-2 ul {
-    list-style-type: none; }
-  .grid__Area .contenedor-3 {
-    background-image: linear-gradient(orange, white);
+    .grid__Form .contenedor-2 ul {
+      list-style-type: none; }
+  .grid__Form .contenedor-form {
+    background-color: #fff;
+    grid-area: contenedor-form;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    padding: 2rem; }
+    .grid__Form .contenedor-form .start {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      padding: 2rem; }
+    .grid__Form .contenedor-form .width input {
+      font-size: 30px;
+      margin: 1rem; }
+    .grid__Form .contenedor-form .textarea {
+      height: 10rem;
+      padding: 1rem; }
+    .grid__Form .contenedor-form .button {
+      color: white;
+      background-color: #0b0c0d;
+      height: 2rem;
+      margin: 2rem;
+      border: none;
+      border-radius: 5px; }
+    .grid__Form .contenedor-form ul {
+      text-align: center;
+      list-style-type: none;
+      margin: auto; }
+  .grid__Form .contenedor-3 {
     grid-area: contenedor-3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 2rem; }
-  .grid__Area .contenedor-3 ul {
-    text-align: center;
-    list-style-type: none;
-    margin: auto; }
-  .grid__Area .contenedor-4 {
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: #fff;
+    border-radius: 1rem; }
+  .grid__Form .contenedor-4 {
     grid-area: contenedor-4;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 5rem;
-    background-image: linear-gradient(orange, white);
+    background-color: #fff;
     border-radius: 1rem; }
+  .grid__Form .contenedor-5 {
+    grid-area: contenedor-5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: #fff;
+    border-radius: 1rem; }
+
+@media (max-width: 768px) {
+  .grid__Form {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-form  contenedor-form contenedor-form contenedor-form "  "contenedor-form  contenedor-form contenedor-form contenedor-form " "contenedor-2 contenedor-2 contenedor-3 contenedor-3" "contenedor-4 contenedor-4 contenedor-5 contenedor-5";
+    height: max-content; } }
+
+/* helpers */
+.none {
+  border: none;
+  text-decoration: none;
+  color: inherit; }
+
+.flex__Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.color {
+  background-image: none; }
+
+.tracing {
+  border-bottom: 2px solid orange; }
+
+.border {
+  border: 1px solid orange; }
+
+.flex__Row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.button__Articulos {
+  background-color: #0b0c0d;
+  color: white; }

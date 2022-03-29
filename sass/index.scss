@@ -2,19 +2,18 @@
 // misc
 @import "misc/variables";
 @import "misc/normalize";
-@import "sass/misc/mixins";
-@import "sass/misc/query";
+@import "misc/mixins";
 
 // artials
-@import "sass/artials/header";
-@import "sass/artials/footer";
+@import "artials/header";
+@import "artials/footer";
 
 // views
 @import "views/home";
 @import "views/service";
-@import "sass/views/proyectos";
-@import "sass/views/contact-us";
-@import "sass/views/log-in";
-@import "sass/views/form";
+@import "views/projectos";
+@import "views/contact-us";
+@import "views/log-in";
+@import "views/form";
 
-
+@import "misc/helpers"

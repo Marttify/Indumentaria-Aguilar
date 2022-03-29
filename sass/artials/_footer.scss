@@ -1,5 +1,6 @@
 /* start of footer */
-.footer{
+
+.footer-2{
     background-image: linear-gradient(to top,var(--secondary), white);
     background-color: #fff;
     border:1px solid orange;
@@ -16,5 +17,33 @@
     }
     & .link{
         margin-top: 5em;
+    }
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas:
+    "contenedor-1 contenedor-2 contenedor-3 contenedor-4"
+    ;
+    padding: 1rem;
+    background-color: $secondary;
+    border-top: 2px solid orange;
+    display: flex;
+    justify-content: space-between;
+    & .contenedor-1{
+        grid-area: contenedor-1;
+    }
+    & .contenedor-2{
+        grid-area: contenedor-2;
+    }
+    & .contenedor-3{
+        grid-area: contenedor-3;
+    }
+    & .contenedor-4{
+        grid-area: contenedor-4;
+        & a img{
+            width: 50px;
+        }
     }
 }
