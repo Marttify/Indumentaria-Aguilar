@@ -356,14 +356,24 @@ body {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-form  contenedor-form contenedor-form contenedor-form "  "contenedor-form  contenedor-form contenedor-form contenedor-form " "contenedor-2 contenedor-2 contenedor-3 contenedor-3" "contenedor-4 contenedor-4 contenedor-5 contenedor-5";
-    height: max-content; } }
+    height: max-content; }
+    .grid__Form .contenedor-2 {
+      background-color: #fff; }
+    .grid__Form .contenedor-form {
+      background-color: #fff; }
+    .grid__Form .contenedor-3 {
+      background-color: #fff; }
+    .grid__Form .contenedor-4 {
+      background-color: #fff; }
+    .grid__Form .contenedor-5 {
+      background-color: #fff; } }
 
 /* Service */
 .grid__Service {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3" "contenedor-4 contenedor-4 contenedor-4 contenedor-4";
+  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-3 contenedor-3"  "contenedor-2 contenedor-2 contenedor-3 contenedor-3";
   max-width: 1080px;
   text-align: center;
   gap: 1rem;
@@ -373,25 +383,32 @@ body {
   margin: auto;
   height: 100rem; }
   .grid__Service .contenedor-1 {
-    background-image: linear-gradient(orange, white);
+    background-image: url(../../assets/image/titulo-2.png);
     grid-area: contenedor-1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 5rem;
-    font-size: 30px;
+    color: #fff;
+    padding: 1rem;
+    font-size: 25px;
     border-radius: 1rem; }
   .grid__Service .contenedor-2 {
-    background-image: linear-gradient(to top, orange, white);
+    background-color: #f7dcab;
     grid-area: contenedor-2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    padding: 2rem; }
+    .grid__Service .contenedor-2 div ul {
+      text-align: center;
+      margin: auto; }
   .grid__Service .contenedor-3 {
-    background-image: linear-gradient(orange, white);
+    background-color: #f7dcab;
     grid-area: contenedor-3;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    padding: 2rem;
+    justify-content: space-around; }
     .grid__Service .contenedor-3 .buttom {
       background-color: black; }
   .grid__Service .contenedor-4 {
@@ -400,8 +417,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     padding: 2rem;
-    background-image: linear-gradient(orange, white);
+    background-color: #f7dcab;
     border-radius: 1rem; }
+    .grid__Service .contenedor-4 div ul {
+      text-align: center;
+      margin: auto; }
   .grid__Service .contenedor-2 iframe {
     width: 100%; }
   .grid__Service .contenedor-3 ul iframe {

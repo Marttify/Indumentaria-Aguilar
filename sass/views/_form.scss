@@ -120,5 +120,21 @@
         "contenedor-4 contenedor-4 contenedor-5 contenedor-5"
         ;
         height: max-content;
+        & .contenedor-2{
+            background-color: $secondary;
+
+        }
+        & .contenedor-form{
+            background-color: $secondary;
+        }
+        & .contenedor-3{
+            background-color: $secondary;
+        }
+        & .contenedor-4{
+            background-color: $secondary;
+        }
+        & .contenedor-5{
+            background-color: $secondary;
+        }
     }
 }
