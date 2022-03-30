@@ -119,22 +119,15 @@
         "contenedor-2 contenedor-2 contenedor-3 contenedor-3"
         "contenedor-4 contenedor-4 contenedor-5 contenedor-5"
         ;
+        gap: 8px 2px;
         height: max-content;
-        & .contenedor-2{
-            background-color: $secondary;
-
-        }
+        margin: 0 1rem 1rem;
         & .contenedor-form{
-            background-color: $secondary;
-        }
-        & .contenedor-3{
-            background-color: $secondary;
-        }
-        & .contenedor-4{
-            background-color: $secondary;
-        }
-        & .contenedor-5{
-            background-color: $secondary;
+            & .width{
+                & input{
+                    font-size: 25px;
+                }
+            }
         }
     }
 }

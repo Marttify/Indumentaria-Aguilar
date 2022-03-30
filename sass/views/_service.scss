@@ -16,7 +16,6 @@
     padding-top: 6em;
     padding-bottom: 6em;
     margin: auto;
-    height: 100rem;
 
     & .contenedor-1{
         background-image:url(../../assets/image/titulo-2.png);
@@ -70,5 +69,36 @@
     }
     & .contenedor-3 ul iframe{
         width: 100%;
+    }
+}
+
+
+@media (max-width: 768px){
+    .grid__Service{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
+        "contenedor-4 contenedor-4 contenedor-4 contenedor-4"
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
+        "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+        ;
+        & .contenedor-1{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-2{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-3{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-4{
+            width: 80%;
+            margin: auto;
+        }
     }
 }

@@ -42,6 +42,9 @@
             text-align: left;
             margin-right: 0;
         }
+        & h2{
+            margin-bottom: 3rem;
+        }
     }
     & .contenedor-3{
         grid-area: contenedor-3;
@@ -49,6 +52,9 @@
         // border-radius: 1rem;
         padding: 2rem;
         justify-content: space-around;
+        & h2{
+            margin-bottom: 3rem;
+        }
     }
     & .contenedor-4{
         grid-area: contenedor-4;
@@ -60,6 +66,36 @@
         // border-radius: 1rem;
         & div ul{
             text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .grid__Project{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
+        "contenedor-4 contenedor-4 contenedor-4 contenedor-4"
+        "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
+        "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+        ;
+        & .contenedor-1{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-2{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-3{
+            width: 80%;
+            margin: auto;
+        }
+        & .contenedor-4{
+            width: 80%;
             margin: auto;
         }
     }
