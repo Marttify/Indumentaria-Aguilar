@@ -10,7 +10,7 @@
     & .navBar{
         max-width: 1080px;
         margin: auto;
-        color: black;
+        color: $principal;
         display: flex;
         justify-content: space-around;
         & a img{
@@ -18,15 +18,59 @@
             border-radius: 100%;
             line-height: 62px;
         }
-        & .navBar__Two, .navBar__Icon{
+        &__Container{
+            display: none;
+            & .icon{
+                display: none;
+                margin: auto;
+                font-size: 25px;
+            }
+            & .navBar__SubMenu{
+                display: none;
+                border: 1px solid black;
+                text-align: left;
+                padding: 1rem;
+                position: absolute;
+                background-color: white;
+                margin-top: 2rem;
+                position: fixed;
+                left: 50%;
+                top: 1rem;
+                height: calc(100% - 60px);
+                overflow-y: auto;
+                & .log__in{
+                    padding: 0px 1em;
+                    margin: 5px 10px;
+                    border-radius: 5px;
+                    border: 2px solid black;
+                    text-align: center;
+                    &:hover{
+                        background-color: $secondary;
+                        background-image: linear-gradient($secondary, white);
+                        transition: 0.5s;
+                    }
+                }
+                & a{
+                    padding: 1em;
+                    font-size: 25px;
+                    padding: 10px auto;
+                    margin: 1rem;
+                } 
+            }
+        }
+        & .navBar__Two, .navBar__Container{
             display: flex;
             flex-direction: column;
             & .navBar__Items{
-                margin: 0px;
+                margin: 0%;
                 padding: 0%;
                 display: flex;
                 justify-content: end;
-                & .navBar__List{
+                & .icon__SubMenu{
+                    background: none;
+                    border: none;
+                }
+                & a{
                     color: $principal;
                     display: inline-block;
                     padding: 0px 1em;
@@ -50,32 +94,6 @@
                     padding: 1em;
                 }
             }
-            & .navBar__SubMenu{
-                border: 1px solid black;
-                text-align: left;
-                padding: 1rem;
-                & .log__in{
-                    padding: 0px 1em;
-                    margin: 5px 10px;
-                    border-radius: 5px;
-                    border: 2px solid black;
-                    &:hover{
-                        background-color: $secondary;
-                    }
-                }
-                & a{
-                    padding: 1em;
-                }
-            }
-        }
-        & .sub__Menu{
-            background: none;
-            border: none;
-            width: 4em;
-            display: none;
-        }
-        & .navBar__Icon{
-            display: none;
         }
     }
 }
@@ -84,75 +102,26 @@
 
 @media (max-width: 768px){
     .header{
-        // font-size: 60px;
-        & .navBar{
+        .navBar{
             & a img{
                 font-size: 11px;
             }
-            & .navBar__Two{
+            &__Two{
                 display: none;
             }
-            & .navBar__Icon{
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                margin: auto 0;
-                border: none;
-                background-color: white;
+            &__Conteiner{
+                display: block;
                 & .icon{
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    font-size: 2rem;
-                    padding: 2px 7px;
-                    &:hover .navBar__SubMenu{
-                        display: block;
-                    }
+                    display: block;
                 }
                 & .navBar__SubMenu{
                     display: none;
-                    position: absolute;
-                    background-color: white;
-                    margin-top: 2rem;
-                    position: fixed;
-                    left: 50%;
-                    top: 1rem;
-                    height: calc(100% - 60px);
-                    overflow-y: auto;
-                    & :hover{
-                        display: block;
-                    }
-                    & .navBar__List{
-                        font-size: 25px;
-                        padding: 10px auto;
-                        margin: 1rem;
-                    }
-                    & .log__in{
-                        text-align: center;
-                        border-radius: 1px solid black;
-                        margin-bottom: 3rem;
-                        &:hover{
-                            background-image: linear-gradient($secondary, white);
-                            transition: 0.5s;
-                        }
-                    }   
                 }
                 & :hover .navBar__SubMenu{
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-                    display: inline-block;
-                    text-align: center;
-                    position: fixed;
-                    left: 50%;
-                    top: 68px;
-                    height: calc(100% - 60px);
-                    overflow-y: auto;
-                    background-image: linear-gradient(to top,var(--secondary), white);
+                    display: block;
                 }
             }
         }
     }
+
 }
