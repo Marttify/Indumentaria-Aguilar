@@ -214,7 +214,8 @@ body {
     grid-template-areas: "frame" "text" "section";
     border: 2px solid white;
     gap: 1rem;
-    padding-top: 0; }
+    padding-top: 0;
+    min-width: 600px; }
     .main__Description .text {
       margin: 2rem;
       border: 2px solid orange; }
@@ -322,7 +323,8 @@ body {
     grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-form  contenedor-form contenedor-form contenedor-form "  "contenedor-form  contenedor-form contenedor-form contenedor-form " "contenedor-2 contenedor-2 contenedor-3 contenedor-3" "contenedor-4 contenedor-4 contenedor-5 contenedor-5";
     gap: 8px 2px;
     height: max-content;
-    margin: 0 1rem 1rem; }
+    margin: 0 1rem 1rem;
+    min-width: 600px; }
     .grid__Form .contenedor-form .width input {
       font-size: 25px; } }
 
@@ -389,7 +391,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3"; }
+    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
+    min-width: 600px; }
     .grid__Service .contenedor-1 {
       width: 80%;
       margin: auto; }
@@ -461,7 +464,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3"; }
+    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
+    min-width: 600px; }
     .grid__Project .contenedor-1 {
       width: 80%;
       margin: auto; }
@@ -513,7 +517,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-2 contenedor-3 contenedor-2 contenedor-2"; }
+    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-2 contenedor-3 contenedor-2 contenedor-2";
+    min-width: 600px; }
     .grid__Contact .contenedor-1 {
       width: 80%;
       height: 16rem;
