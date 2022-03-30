@@ -43,14 +43,19 @@ body {
       border-radius: 100%;
       line-height: 62px; }
     .header .navBar__Container {
-      display: none; }
+      display: none;
+      margin: auto 0;
+      background-color: #fff;
+      border: none; }
       .header .navBar__Container .icon {
-        display: none;
-        margin: auto;
+        padding: 0px;
         font-size: 25px; }
-      .header .navBar__Container .navBar__SubMenu {
-        display: none;
-        border: 1px solid black;
+        .header .navBar__Container .icon:hover {
+          padding: 9px;
+          margin: 0;
+          border: 2px solid orange; }
+      .header .navBar__Container--SubMenu {
+        border: 3px solid orange;
         text-align: left;
         padding: 1rem;
         position: absolute;
@@ -61,64 +66,63 @@ body {
         top: 1rem;
         height: calc(100% - 60px);
         overflow-y: auto; }
-        .header .navBar__Container .navBar__SubMenu .log__in {
+        .header .navBar__Container--SubMenu .log__In {
           padding: 0px 1em;
           margin: 5px 10px;
           border-radius: 5px;
           border: 2px solid black;
           text-align: center; }
-          .header .navBar__Container .navBar__SubMenu .log__in:hover {
+          .header .navBar__Container--SubMenu .log__In:hover {
             background-color: #fff;
             background-image: linear-gradient(#fff, white);
             transition: 0.5s; }
-        .header .navBar__Container .navBar__SubMenu a {
-          padding: 1em;
+        .header .navBar__Container--SubMenu a {
           font-size: 25px;
           padding: 10px auto;
           margin: 1rem; }
-    .header .navBar .navBar__Two, .header .navBar .navBar__Container {
+    .header .navBar__Two .navBar__Items {
+      margin: 0%;
+      padding: 0%;
+      border: none;
       display: flex;
-      flex-direction: column; }
-      .header .navBar .navBar__Two .navBar__Items, .header .navBar .navBar__Container .navBar__Items {
-        margin: 0%;
-        padding: 0%;
-        display: flex;
-        justify-content: end; }
-        .header .navBar .navBar__Two .navBar__Items .icon__SubMenu, .header .navBar .navBar__Container .navBar__Items .icon__SubMenu {
-          background: none;
-          border: none; }
-        .header .navBar .navBar__Two .navBar__Items a, .header .navBar .navBar__Container .navBar__Items a {
-          color: #0b0c0d;
-          display: inline-block;
-          padding: 0px 1em;
-          margin: 5px 10px; }
-          .header .navBar .navBar__Two .navBar__Items a:hover, .header .navBar .navBar__Container .navBar__Items a:hover {
-            border-bottom: 2px solid orange;
-            transition: 0.2s;
-            color: #0b0c0d; }
-        .header .navBar .navBar__Two .navBar__Items .log__in, .header .navBar .navBar__Container .navBar__Items .log__in {
-          padding: 0px 1em;
-          margin: 5px 10px;
-          border-radius: 5px;
-          border: 2px solid black; }
-          .header .navBar .navBar__Two .navBar__Items .log__in:hover, .header .navBar .navBar__Container .navBar__Items .log__in:hover {
-            background-color: #fff; }
-        .header .navBar .navBar__Two .navBar__Items a, .header .navBar .navBar__Container .navBar__Items a {
-          padding: 1em; }
+      justify-content: end; }
+      .header .navBar__Two .navBar__Items .log__In--Icon {
+        background: none;
+        border: none; }
+      .header .navBar__Two .navBar__Items a {
+        color: #0b0c0d;
+        display: inline-block;
+        padding: 0px 1em;
+        margin: 5px 10px; }
+        .header .navBar__Two .navBar__Items a:hover {
+          border-bottom: 2px solid orange;
+          transition: 0.2s;
+          color: #0b0c0d; }
+      .header .navBar__Two .navBar__Items .log__In {
+        padding: 0px 1em;
+        margin: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid black; }
+        .header .navBar__Two .navBar__Items .log__In:hover {
+          background-color: #fff; }
 
 @media (max-width: 768px) {
   .header .navBar a img {
     font-size: 11px; }
   .header .navBar__Two {
     display: none; }
-  .header .navBar__Conteiner {
+  .header .navBar__Container {
     display: block; }
-    .header .navBar__Conteiner .icon {
-      display: block; }
-    .header .navBar__Conteiner .navBar__SubMenu {
+    .header .navBar__Container .icon {
+      margin: auto;
+      font-size: 25px; }
+    .header .navBar__Container--SubMenu {
       display: none; }
-    .header .navBar__Conteiner :hover .navBar__SubMenu {
-      display: block; } }
+  .header .navBar :hover .navBar__Container--SubMenu {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; } }
 
 /* start of footer */
 .footer-2 {
