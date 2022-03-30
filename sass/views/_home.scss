@@ -68,7 +68,9 @@
         border: 2px solid white;
         gap: 1rem;
         padding-top: 0;
-        min-width: 600px;
+        min-width: 560px;
+        width: 100%;
+        margin: auto;
         & .text{
             margin: 2rem;
             border: 2px solid orange ;

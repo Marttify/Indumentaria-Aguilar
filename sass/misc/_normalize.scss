@@ -16,6 +16,9 @@
 html{
     font-family: $font-primary;
     color: gray;
+    margin: 0;
+    padding: 0%;
+
 }
 
 
@@ -27,6 +30,8 @@ a{
     }
 }
 body{
+    margin: 0%;
+    padding: 0%;
     background-color: $secondary;
     font-family: 'Shippori Antique B1', sans-serif;
     font-size: 16px;

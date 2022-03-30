@@ -12,7 +12,9 @@
 
 html {
   font-family: "Inter", sans-serif;
-  color: gray; }
+  color: gray;
+  margin: 0;
+  padding: 0%; }
 
 a {
   color: inherit;
@@ -21,6 +23,8 @@ a {
     border-bottom: 1px solid black; }
 
 body {
+  margin: 0%;
+  padding: 0%;
   background-color: #fff;
   font-family: 'Shippori Antique B1', sans-serif;
   font-size: 16px;
@@ -125,22 +129,6 @@ body {
     justify-content: space-between; } }
 
 /* start of footer */
-.footer-2 {
-  background-image: linear-gradient(to top, var(--secondary), white);
-  background-color: #fff;
-  border: 1px solid orange;
-  display: flex;
-  justify-content: center; }
-  .footer-2 .footer__Link {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 1em; }
-    .footer-2 .footer__Link :hover a {
-      border-bottom: 2px solid black; }
-  .footer-2 .link {
-    margin-top: 5em; }
-
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -161,6 +149,33 @@ body {
     grid-area: contenedor-4; }
     .footer .contenedor-4 a img {
       width: 50px; }
+
+@media (max-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: "contenedor-1 contenedor-2" "contenedor-3 contenedor-4";
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 450px;
+    margin: auto;
+    text-align: center; }
+    .footer .contenedor-1 {
+      grid-area: contenedor-1;
+      margin: auto; }
+    .footer .contenedor-2 {
+      grid-area: contenedor-2;
+      margin: auto; }
+    .footer .contenedor-3 {
+      grid-area: contenedor-3;
+      margin: auto; }
+    .footer .contenedor-4 {
+      grid-area: contenedor-4;
+      margin: auto; } }
 
 /* home */
 .main__Description {
@@ -215,7 +230,9 @@ body {
     border: 2px solid white;
     gap: 1rem;
     padding-top: 0;
-    min-width: 600px; }
+    min-width: 560px;
+    width: 100%;
+    margin: auto; }
     .main__Description .text {
       margin: 2rem;
       border: 2px solid orange; }
@@ -465,7 +482,7 @@ body {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
-    min-width: 600px; }
+    font-size: 100%; }
     .grid__Project .contenedor-1 {
       width: 80%;
       margin: auto; }
