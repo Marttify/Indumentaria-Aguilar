@@ -20,14 +20,13 @@
     padding-bottom: 6em;
     margin: auto;
     height: 60rem;
-
     & .contenedor-1{
         background-image:url(../../assets/image/titulo-2.png);
         grid-area: contenedor-1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 25px;
+        font-size:map-get($map: $Estilos , $key:t-f );
         color: $secondary;
     }
     & .contenedor-2{

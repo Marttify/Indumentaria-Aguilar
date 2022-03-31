@@ -6,3 +6,40 @@ $font-primary: "Inter", sans-serif;
 $font-secondary: "Bowly One SC", cursive;
 $third: rgb(247, 220, 171);
 $font-third: 'Roboto Mono', monospace;
+$lyrics: gray;
+
+// Maps
+$spacings:(
+    xlarge: 5rem,
+    large: 3rem,
+    medium: 2rem,
+    small: 1.5rem,
+    xsmall: 1rem,
+
+);
+
+@each $var, $val in $spacings {
+    .sp__#{$var} {
+        padding: #{$val};
+    }
+}
+// map-geto
+$Estilos:(
+    color: gray,
+    t-a: center,
+    t-f: 30px,
+    pdng:1rem
+);
+
+
+
+
+// Bucles
+
+@for $i from 1 to 5{
+    .contenedor-#{$i}{
+        background-color: $third;
+        color: $lyrics;
+        padding: 2rem;
+    }
+}

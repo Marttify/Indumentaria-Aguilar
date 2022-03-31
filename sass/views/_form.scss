@@ -10,29 +10,21 @@
     "contenedor-4 contenedor-form contenedor-form contenedor-5"
     ;
     max-width: 1080px;
-    text-align: center;
+    text-align: map-get($map:$Estilos, $key:t-a );
     gap: 1rem;
-    justify-content: center;
     padding-top: 6em;
     margin: auto;
     margin-bottom: 5rem;
     & .contenedor-1{
         background-image:url(../../assets/image/titulo-2.png);
-        color: white;
+        color: $secondary;
         grid-area: contenedor-1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 5rem;
-        font-size: 30px;
+        font-size:map-get($map: $Estilos, $key:t-f);
         border-radius: 1rem;
     }
     & .contenedor-2{
+        @include flex(column, space-between, center, default);
         grid-area: contenedor-2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 5rem;
         background-color: $third;
         border-radius: 1rem;
         & ul{
@@ -40,18 +32,14 @@
         }
     }
     & .contenedor-form{
+        @include flex(column, space-between, center, default);
         background-color: $third;
         grid-area: contenedor-form;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         border-radius: 1rem;
-        padding: 2rem;
         & .start{
             display: flex;
             flex-direction: row;
             justify-content: start;
-            padding: 2rem;
         }
         & .width{
             & input{
@@ -61,7 +49,6 @@
         }
         & .textarea{
             height: 10rem;
-            padding: 1rem;
         }
         & .button{
             color: $secondary;
@@ -78,35 +65,29 @@
         }
     }
     & .contenedor-3{
+        @include flex(column, space-between, center, default);
         grid-area: contenedor-3;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 5rem;
         background-color: $third;
         border-radius: 1rem;
+        & ul{
+            @include flex(column, space-between, center, default);
+        }
     }
     & .contenedor-4{
+        @include flex(column, space-between, center, default);
         grid-area: contenedor-4;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 5rem;
         background-color: $third;
         border-radius: 1rem;
     }
     & .contenedor-5{
+        @include flex(column, space-between, center, default);
         grid-area: contenedor-5;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 5rem;
         background-color: $third;
         border-radius: 1rem;
     }
 }
 
-
+// media
 @media (max-width: 768px){
     .grid__Form{
         display: grid;

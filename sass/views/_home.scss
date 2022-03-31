@@ -60,7 +60,7 @@
     .main__Description{
         display: grid;
         grid-template-columns: repeat(1,100%);
-        grid-template-rows: repeat(3,auto);
+        grid-template-rows: repeat(3,250px);
         grid-template-areas: 
         "frame"
         "text"
