@@ -1,5 +1,5 @@
 
-/* home */
+/* start of index(home) */
 
 
 .main__Description{
@@ -10,20 +10,17 @@
     ". text frame ."
     ". section section .";
     text-align: center;
-    border: 2px solid white;
     gap: 1rem;
     justify-content: center;
     padding-top: 6em;
+    color: $principal;
     & .text{
         grid-area: text;
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        background-color: $third;
-        border-radius: 1em;
+        justify-content: center;
         padding: 1em;
-        border: 2px solid orange;
         & button{
             margin: auto;
             border: none;
@@ -40,48 +37,40 @@
         grid-area: frame;
         & img{
             width: 100%;
-            border-radius: 1em;
-            border: 2px solid orange ;
+            border-radius: 1rem;
         }
     }
     & .section{
         grid-area: section;
         background-color: $third;
-        border-radius: 1em;
         padding: 2em;
+        font-size: 18px;
         text-align: center;
-        margin-bottom: 5rem;
-        border: 2px solid orange ;
+        margin-bottom: 10rem;
     }
 }
 
-// start of main
+// start of media query in the index
+
 @media (max-width: 768px){
     .main__Description{
         display: grid;
         grid-template-columns: repeat(1,100%);
-        grid-template-rows: repeat(3,250px);
+        grid-template-rows: repeat(3,auto);
         grid-template-areas: 
-        "frame"
         "text"
+        "frame"
         "section";
-        border: 2px solid white;
         gap: 1rem;
-        padding-top: 0;
-        min-width: 560px;
-        width: 100%;
         margin: auto;
         & .text{
             margin: 2rem;
-            border: 2px solid orange ;
         }
         & .frame img{
             width: 80%;
             margin: 2rem;
-            border: 2px solid orange;
         }
         & .section{
-            border: 2px solid orange;
             margin: 2rem;
         }
     }

@@ -5,16 +5,16 @@
     grid-template-columns: repeat(4,25%);
     grid-template-rows: repeat(1,auto);
     grid-template-areas:
-    "contenedor-1 contenedor-2 contenedor-3 contenedor-4"
+    "contenedor-a contenedor-b contenedor-c contenedor-d"
     ;
     background-color: $secondary;
-    border-top: 2px solid orange;
-    @include flex(row, space-between, center , map-get($map:$Estilos, $key:t-f ));
+    border-top: 2px solid $lyrics;
+    @include flex(row, space-around, center , map-get($map:$Estilos, $key:t-f ));
 }
 @each $var in a, b, c, d {
     .contenedor-#{$var}{
         background-color: $secondary;
-        color: $lyrics;
+        color: $principal;
         & a img{
             width: 50px;
         }
@@ -25,19 +25,16 @@
 @media (max-width: 768px){
     .footer{
         display: grid;
-        grid-template-columns: repeat(2,50%);
-        grid-template-rows: repeat(2,200px);
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(4,auto);
         grid-template-areas:
-        "contenedor-a contenedor-b"
-        "contenedor-c contenedor-d"
+        "contenedor-a"
+        "contenedor-b"
+        "contenedor-c"
+        "contenedor-d"
         ;
         padding: 0%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        min-width: 450px;
-        margin: auto;
+        margin: 1rem auto;
         text-align: center
     }
 }

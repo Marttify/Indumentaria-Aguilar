@@ -6,11 +6,11 @@
     background-color: $secondary;
     position: fixed;
     width: 100%;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid $lyrics;
     & .navBar{
         max-width: 1080px;
         margin: auto;
-        color: $principal;
+        color: $lyrics;
         display: flex;
         justify-content: space-around;
         & a img{
@@ -23,15 +23,6 @@
             margin: auto 0;
             background-color: $secondary;
             border: none;
-            & .icon{
-                padding: 0px;
-                font-size: 25px;
-                &:hover{
-                    padding: 9px;
-                    margin: 0;
-                    border: 2px solid orange;
-                }
-            }
             &--SubMenu{
                 border: 3px solid orange;
                 text-align: left;
@@ -44,18 +35,6 @@
                 top: 1rem;
                 height: calc(100% - 60px);
                 overflow-y: auto;
-                & .log__In{
-                    padding: 0px 1em;
-                    margin: 5px 10px;
-                    border-radius: 5px;
-                    border: 2px solid black;
-                    text-align: center;
-                    &:hover{
-                        background-color: $secondary;
-                        background-image: linear-gradient($secondary, white);
-                        transition: 0.5s;
-                    }
-                }
                 & a{
                     font-size: 25px;
                     padding: 10px auto;
@@ -64,25 +43,22 @@
             }
         }
         &__Two{
+            margin: auto 0;
             & .navBar__Items{
                 margin: 0%;
                 padding: 0%;
                 border: none;
                 display: flex;
                 justify-content: end;
-                & .log__In--Icon{
-                    background: none;
-                    border: none;
-                }
                 & a{
                     color: $principal;
                     display: inline-block;
                     padding: 0px 1em;
                     margin: 5px 10px;
                     &:hover{
-                        border-bottom: 2px solid orange;
+                        border-bottom: 2px solid $lyrics;
                         transition: 0.2s;
-                        color: $principal;
+                        color: $lyrics;
                     }
                 }
                 & .log__In{
@@ -114,6 +90,7 @@
                 display: block;
                 & .icon{
                     margin: auto;
+                    padding: 50%;
                     font-size: 25px;
                 }
                 &--SubMenu{
@@ -121,7 +98,6 @@
                 }
             }
             & :hover .navBar__Container--SubMenu{
-                display: block;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;

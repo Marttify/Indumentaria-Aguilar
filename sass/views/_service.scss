@@ -16,7 +16,6 @@
     padding-top: 6em;
     padding-bottom: 6em;
     margin: auto;
-
     & .contenedor-1{
         background-image:url(../../assets/image/titulo-2.png);
         grid-area: contenedor-1;
@@ -24,13 +23,12 @@
         color: $secondary;
         padding: map-get($map:$Estilos, $key:pdng );
         font-size:map-get($map: $Estilos , $key:t-f );
-        border-radius: 1rem;
     }
     & .contenedor-2{
         background-color: $third;
         grid-area: contenedor-2;
+        color: $principal;
         @include flex(column, space-around, center, default);
-        border-radius: 1rem;
         padding: 2rem;
         & div ul{
             text-align: map-get($map:$spacings, $key:t-a);
@@ -39,8 +37,8 @@
     }
     & .contenedor-3{
         background-color: $third;
+        color: $principal;
         grid-area: contenedor-3;
-        border-radius: 1rem;
         padding: 2rem;
         @include flex(column, space-around, center, default);
         & .buttom{
@@ -52,7 +50,7 @@
         @include flex(column, space-between, default, default);
         padding: map-get($map:$Estilos, $key:pdng );
         background-color: $third;
-        border-radius: 1rem;
+        color: $principal;
         & div ul{
             text-align: map-get($map:$spacings, $key:t-a);
             margin: auto;
@@ -78,7 +76,6 @@
         "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
         "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
         ;
-        
         min-width: 600px;
         & .contenedor-1{
             width: 80%;

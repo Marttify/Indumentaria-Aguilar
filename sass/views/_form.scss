@@ -1,47 +1,46 @@
+
+
 /* Start of Form  */
+
 .grid__Form{
     display: grid;
-    grid-template-columns: repeat(4,25%);
-    grid-template-rows: repeat(4,auto);
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: repeat(2,auto);
     grid-template-areas:
-    "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-    "contenedor-2 contenedor-form contenedor-form contenedor-3" 
-    "contenedor-4 contenedor-form contenedor-form contenedor-5"
-    "contenedor-4 contenedor-form contenedor-form contenedor-5"
+    "contenedor-1"
+    "contenedor-2"
     ;
     max-width: 1080px;
     text-align: map-get($map:$Estilos, $key:t-a );
-    gap: 1rem;
     padding-top: 6em;
     margin: auto;
     margin-bottom: 5rem;
+    color: $principal;
     & .contenedor-1{
         background-image:url(../../assets/image/titulo-2.png);
         color: $secondary;
         grid-area: contenedor-1;
         font-size:map-get($map: $Estilos, $key:t-f);
-        border-radius: 1rem;
+        margin-bottom: 2rem;
     }
     & .contenedor-2{
         @include flex(column, space-between, center, default);
+        background-color: $secondary;
         grid-area: contenedor-2;
-        background-color: $third;
-        border-radius: 1rem;
-        & ul{
-            list-style-type: none;
-        }
-    }
-    & .contenedor-form{
-        @include flex(column, space-between, center, default);
-        background-color: $third;
-        grid-area: contenedor-form;
-        border-radius: 1rem;
+        color: $principal;
+        border: 1px solid black;
         & .start{
+            margin: 5%;
+            padding: 0%;
             display: flex;
             flex-direction: row;
             justify-content: start;
         }
+        & h2{
+            margin: 2rem auto;
+        }
         & .width{
+            width: 100%;
             & input{
                 font-size: 30px;
                 margin: 1rem;
@@ -49,14 +48,19 @@
         }
         & .textarea{
             height: 10rem;
+            width: 100%;
         }
         & .button{
             color: $secondary;
             background-color: $principal;
             height: 2rem;
             margin: 2rem;
+            width: 50%;
             border: none;
             border-radius: 5px;
+            &:hover{
+                font-size: 20px;
+            }
         }
         ul{
             text-align: center;
@@ -64,50 +68,28 @@
             margin: auto;
         }
     }
-    & .contenedor-3{
-        @include flex(column, space-between, center, default);
-        grid-area: contenedor-3;
-        background-color: $third;
-        border-radius: 1rem;
-        & ul{
-            @include flex(column, space-between, center, default);
-        }
-    }
-    & .contenedor-4{
-        @include flex(column, space-between, center, default);
-        grid-area: contenedor-4;
-        background-color: $third;
-        border-radius: 1rem;
-    }
-    & .contenedor-5{
-        @include flex(column, space-between, center, default);
-        grid-area: contenedor-5;
-        background-color: $third;
-        border-radius: 1rem;
-    }
 }
 
-// media
+// media query in the form
+
 @media (max-width: 768px){
     .grid__Form{
         display: grid;
-        grid-template-columns: repeat(4,25%);
-        grid-template-rows: repeat(5,auto);
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(2,auto);
         grid-template-areas:
-        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-        "contenedor-form  contenedor-form contenedor-form contenedor-form " 
-        "contenedor-form  contenedor-form contenedor-form contenedor-form "
-        "contenedor-2 contenedor-2 contenedor-3 contenedor-3"
-        "contenedor-4 contenedor-4 contenedor-5 contenedor-5"
+        "contenedor-1"
+        "contenedor-2"
         ;
-        gap: 8px 2px;
+        margin: 0 1rem 2rem;
+        gap: 2rem;
         height: max-content;
-        margin: 0 1rem 1rem;
-        min-width: 600px;
-        & .contenedor-form{
+        & .contenedor-2{
+            padding: auto;
             & .width{
                 & input{
-                    font-size: 25px;
+                    margin: auto;
+                    font-size: 5vmin;
                 }
             }
         }
