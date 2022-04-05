@@ -155,7 +155,8 @@ body {
 
 .contenedor-a {
   background-color: #fff;
-  color: #0b0c0d; }
+  color: #0b0c0d;
+  margin-bottom: 1rem; }
   .contenedor-a a img {
     width: 50px; }
   .contenedor-a a:hover {
@@ -163,7 +164,8 @@ body {
 
 .contenedor-b {
   background-color: #fff;
-  color: #0b0c0d; }
+  color: #0b0c0d;
+  margin-bottom: 1rem; }
   .contenedor-b a img {
     width: 50px; }
   .contenedor-b a:hover {
@@ -171,7 +173,8 @@ body {
 
 .contenedor-c {
   background-color: #fff;
-  color: #0b0c0d; }
+  color: #0b0c0d;
+  margin-bottom: 1rem; }
   .contenedor-c a img {
     width: 50px; }
   .contenedor-c a:hover {
@@ -179,7 +182,8 @@ body {
 
 .contenedor-d {
   background-color: #fff;
-  color: #0b0c0d; }
+  color: #0b0c0d;
+  margin-bottom: 1rem; }
   .contenedor-d a img {
     width: 50px; }
   .contenedor-d a:hover {
@@ -226,7 +230,7 @@ body {
       border-radius: 1rem; }
   .main__Description .section {
     grid-area: section;
-    background-color: rgba(246, 233, 233, 0.42);
+    background-color: #fff;
     padding: 2em;
     font-size: 18px;
     text-align: center;

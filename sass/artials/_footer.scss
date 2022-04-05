@@ -15,6 +15,7 @@
     .contenedor-#{$var}{
         background-color: $secondary;
         color: $principal;
+        margin-bottom: 1rem;
         & a img{
             width: 50px;
         }
