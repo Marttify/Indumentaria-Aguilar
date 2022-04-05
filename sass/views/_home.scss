@@ -16,20 +16,13 @@
     color: $principal;
     & .text{
         grid-area: text;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1em;
-        & button{
-            margin: auto;
-            border: none;
-            border-radius: 1rem;
-            & a{
-                padding: 2px 4rem;
-                & :hover{
-                    background-color: orange;
-                }
+        @include flex(column, center, center, 1rem );
+        & a{
+            padding: 0px 1rem;
+            margin: 1rem;
+            &:hover{
+                color: $lyrics;
+                border-bottom: 1px solid $lyrics;
             }
         }
     }

@@ -208,19 +208,17 @@ body {
   color: #0b0c0d; }
   .main__Description .text {
     grid-area: text;
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em; }
-    .main__Description .text button {
-      margin: auto;
-      border: none;
-      border-radius: 1rem; }
-      .main__Description .text button a {
-        padding: 2px 4rem; }
-        .main__Description .text button a :hover {
-          background-color: orange; }
+    align-items: center;
+    gap: 1rem; }
+    .main__Description .text a {
+      padding: 0px 1rem;
+      margin: 1rem; }
+      .main__Description .text a:hover {
+        color: red;
+        border-bottom: 1px solid red; }
   .main__Description .frame {
     grid-area: frame; }
     .main__Description .frame img {
@@ -324,7 +322,6 @@ body {
         margin: auto;
         font-size: 5vmin; } }
 
-/* Service */
 .grid__Service {
   display: grid;
   grid-template-columns: repeat(1, 100%);
@@ -333,7 +330,6 @@ body {
   max-width: 1080px;
   text-align: center;
   gap: 1rem;
-  justify-content: center;
   padding-top: 6em;
   padding-bottom: 6em;
   margin: auto; }
@@ -359,26 +355,29 @@ body {
     gap: default;
     padding: 2rem;
     width: 100%; }
-    .grid__Service .contenedor-2 div ul {
-      margin: auto; }
-    .grid__Service .contenedor-2 iframe {
-      width: 100%; }
+    .grid__Service .contenedor-2 div {
+      width: 100%;
+      margin: 2rem 0; }
+      .grid__Service .contenedor-2 div p {
+        margin: auto; }
+      .grid__Service .contenedor-2 div .list {
+        margin: 1rem 0;
+        text-align: left; }
+    .grid__Service .contenedor-2 p {
+      width: 50%;
+      text-align: center; }
   .grid__Service .contenedor-3 {
     background-color: #fff;
     color: #0b0c0d;
     grid-area: contenedor-3;
-    padding: 2rem;
-    width: 100%;
-    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    gap: default; }
-    .grid__Service .contenedor-3 .buttom {
-      background-color: black; }
-    .grid__Service .contenedor-3 ul iframe {
-      width: 100%; }
+    align-items: left;
+    gap: 3rem; }
+    .grid__Service .contenedor-3 p {
+      width: 50%;
+      margin: auto; }
   .grid__Service .contenedor-4 {
     grid-area: contenedor-4;
     display: flex;
@@ -398,28 +397,28 @@ body {
 @media (max-width: 768px) {
   .grid__Service {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
-    min-width: 600px; }
-    .grid__Service .contenedor-1 {
-      width: 80%;
-      margin: auto; }
+    grid-template-areas: "contenedor-1" "contenedor-4" "contenedor-2"  "contenedor-3";
+    margin: 0 1rem; }
     .grid__Service .contenedor-2 {
-      width: 80%;
-      margin: auto; }
-    .grid__Service .contenedor-3 {
-      width: 80%;
-      margin: auto; }
-    .grid__Service .contenedor-4 {
-      width: 80%;
-      margin: auto; }
-      .grid__Service .contenedor-4 div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: default; } }
+      padding: 2rem;
+      width: 100%; }
+      .grid__Service .contenedor-2 div p {
+        width: 100%;
+        text-align: center; }
+      .grid__Service .contenedor-2 div .list {
+        margin: 1rem 0;
+        text-align: left; }
+      .grid__Service .contenedor-2 p {
+        width: 100%;
+        text-align: center; }
+      .grid__Service .contenedor-2 iframe {
+        width: min-content; }
+    .grid__Service .contenedor-3 p {
+      width: 100%; }
+    .grid__Service .contenedor-3 iframe {
+      width: min-content; } }
 
 .grid__Us {
   display: grid;
@@ -475,29 +474,16 @@ body {
 @media (max-width: 768px) {
   .grid__Us {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-4 contenedor-4 contenedor-4 contenedor-4" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-3 contenedor-3 contenedor-3 contenedor-3";
-    font-size: 100%; }
-    .grid__Us .contenedor-1 {
-      width: 80%;
-      margin: auto; }
-    .grid__Us .contenedor-2 {
-      width: 80%;
-      margin: auto; }
-    .grid__Us .contenedor-3 {
-      width: 80%;
-      margin: auto; }
-    .grid__Us .contenedor-4 {
-      width: 80%;
-      margin: auto; } }
+    grid-template-areas: "contenedor-1" "contenedor-4" "contenedor-2"  "contenedor-3";
+    margin: 0 1rem; } }
 
-/* Contact-us */
 .grid__Contact {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(1, 100%);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-2 contenedor-2 contenedor-2 contenedor-2";
+  grid-template-areas: "contenedor-1" "contenedor-2" "contenedor-2"  "contenedor-2";
   max-width: 1080px;
   text-align: center;
   gap: 1rem;
@@ -533,15 +519,9 @@ body {
 @media (max-width: 768px) {
   .grid__Contact {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenedor-1 contenedor-1 contenedor-1 contenedor-1" "contenedor-2 contenedor-2 contenedor-2 contenedor-2" "contenedor-2 contenedor-2 contenedor-2 contenedor-2"  "contenedor-2 contenedor-3 contenedor-2 contenedor-2";
-    min-width: 600px; }
+    grid-template-areas: "contenedor-1" "contenedor-2" "contenedor-2"  "contenedor-2";
+    margin: 0% 1rem; }
     .grid__Contact .contenedor-1 {
-      width: 80%;
-      height: 16rem;
-      margin: auto; }
-    .grid__Contact .contenedor-2 {
-      width: 80%;
-      height: 25rem;
-      margin: auto; } }
+      font-size: large; } }

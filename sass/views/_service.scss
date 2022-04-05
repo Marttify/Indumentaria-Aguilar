@@ -1,5 +1,5 @@
 
-/* Service */
+// Service
 
 .grid__Service{
     display: grid;
@@ -14,7 +14,6 @@
     max-width: 1080px;
     text-align: map-get($map:$Estilos, $key:t-a );
     gap: map-get($map:$spacings, $key:xsmall );
-    justify-content: center;
     padding-top: 6em;
     padding-bottom: 6em;
     margin: auto;
@@ -33,27 +32,30 @@
         @include flex(column, space-around, center, default);
         padding: 2rem;
         width: 100%;
-        & div ul{
-            text-align: map-get($map:$spacings, $key:t-a);
-            margin: auto;
-        }
-        & iframe{
+        & div{
             width: 100%;
+            margin: 2rem 0;
+            & p{
+                margin: auto;
+            }
+            & .list{
+                margin: 1rem 0;
+                text-align: left;
+            }
+        }
+        & p{
+            width: 50%;
+            text-align: center;
         }
     }
     & .contenedor-3{
         background-color: $secondary;
         color: $principal;
         grid-area: contenedor-3;
-        padding: 2rem;
-        width: 100%;
-        text-align: left;
-        @include flex(column, space-around, center, default);
-        & .buttom{
-            background-color: black;
-        }
-        & ul iframe{
-            width: 100%;
+        @include flex(column, space-around, left, 3rem);
+        & p{
+            width: 50%;
+            margin: auto;
         }
     }
     & .contenedor-4{
@@ -72,37 +74,46 @@
     }
 }
 
-
+// media query
 @media (max-width: 768px){
     .grid__Service{
         display: grid;
-        grid-template-columns: repeat(4,25%);
+        grid-template-columns: repeat(1,100%);
         grid-template-rows: repeat(4,auto);
         grid-template-areas:
-        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-        "contenedor-4 contenedor-4 contenedor-4 contenedor-4"
-        "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
-        "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+        "contenedor-1"
+        "contenedor-4"
+        "contenedor-2" 
+        "contenedor-3"
         ;
-        min-width: 600px;
-        & .contenedor-1{
-            width: 80%;
-            margin: auto;
-        }
+        margin: 0 1rem;
         & .contenedor-2{
-            width: 80%;
-            margin: auto;
+            padding: 2rem;
+            width: 100%;
+            & div{
+                & p{
+                    width: 100%;
+                    text-align: center;
+                }
+                & .list{
+                    margin: 1rem 0;
+                    text-align: left;
+                }
+            }
+            & p{
+                width: 100%;
+                text-align: center;
+            }
+            & iframe{
+                width: min-content;
+            }
         }
         & .contenedor-3{
-            width: 80%;
-            margin: auto;
-        }
-        & .contenedor-4{
-            
-            width: 80%;
-            margin: auto;
-            & div{
-                @include flex(column, space-between, center, default);
+            & p{
+                width: 100%;
+            }
+            & iframe{
+                width: min-content;
             }
         }
     }

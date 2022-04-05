@@ -1,16 +1,16 @@
 
-/* Contact-us */
+// Contact-us
 
 
 .grid__Contact{
     display: grid;
-    grid-template-columns: repeat(4,25%);
+    grid-template-columns: repeat(1,100%);
     grid-template-rows: repeat(4,auto);
     grid-template-areas:
-    "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-    "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
-    "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
-    "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
+    "contenedor-1"
+    "contenedor-2"
+    "contenedor-2" 
+    "contenedor-2"
     ;
     max-width: 1080px;
     text-align: center;
@@ -45,28 +45,21 @@
     }
 }
 
-
+// media query
 @media (max-width: 768px){
     .grid__Contact{
         display: grid;
-        grid-template-columns: repeat(4,25%);
+        grid-template-columns: repeat(1,100%);
         grid-template-rows: repeat(4,auto);
         grid-template-areas:
-        "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
-        "contenedor-2 contenedor-2 contenedor-2 contenedor-2"
-        "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
-        "contenedor-2 contenedor-3 contenedor-2 contenedor-2"
+        "contenedor-1"
+        "contenedor-2"
+        "contenedor-2" 
+        "contenedor-2"
         ;
-        min-width: 600px;
+        margin: 0% 1rem;
         & .contenedor-1{
-            width: 80%;
-            height: 16rem;
-            margin: auto;
-        }
-        & .contenedor-2{
-            width: 80%;
-            height: 25rem;
-            margin: auto;
+            font-size: large;
         }
     }
 }
