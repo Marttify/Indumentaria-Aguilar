@@ -1,60 +1,70 @@
-// project-us
+// about-us
 
-.grid__Project{
+.grid__Us{
     display: grid;
     grid-template-columns: repeat(4,25%);
     grid-template-rows: repeat(4,auto);
     grid-template-areas:
     "contenedor-1 contenedor-1 contenedor-1 contenedor-1"
     "contenedor-4 contenedor-4 contenedor-4 contenedor-4"
-    "contenedor-2 contenedor-2 contenedor-3 contenedor-3" 
-    "contenedor-2 contenedor-2 contenedor-3 contenedor-3"
+    "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
+    "contenedor-2 contenedor-2 contenedor-2 contenedor-2" 
     ;
     max-width: 1080px;
-    text-align: center;
+    text-align: left;
     gap: 1rem;
-    justify-content: center;
     padding-top: 6em;
     padding-bottom: 6em;
     margin: auto;
-
     & .contenedor-1{
-        color: $secondary;
         grid-area: contenedor-1;
+        @include flex(column, space-around, default, default);
         background-image:url(../../assets/image/titulo-2.png);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         font-size:map-get($map: $Estilos , $key:t-f );
+        color: $secondary;
+        text-align: center;
     }
     & .contenedor-2{
         grid-area: contenedor-2;
         margin: auto;
+        background-color: $secondary;
+        color: $principal;
         & ul li{
             text-align: left;
             margin-right: 0;
         }
         & h2{
             margin-bottom: 3rem;
+            text-align: center;
+        }
+        & .none{
+            list-style-type: none;
         }
     }
     & .contenedor-3{
+        background-color: $secondary;
         grid-area: contenedor-3;
+        color: $principal;
         & h2{
+            text-align: center;
             margin-bottom: 3rem;
         }
     }
     & .contenedor-4{
+        background-color: $secondary;
+        color: $principal;
         grid-area: contenedor-4;
+        text-align: left;
+        margin: auto;
         & div ul{
-            text-align: center;
+            text-align: map-get($map:$spacings, $key:t-a);
             margin: auto;
         }
     }
 }
 
 @media (max-width: 768px){
-    .grid__Project{
+    .grid__Us{
         display: grid;
         grid-template-columns: repeat(4,25%);
         grid-template-rows: repeat(4,auto);
@@ -65,7 +75,6 @@
         "contenedor-3 contenedor-3 contenedor-3 contenedor-3"
         ;
         font-size: 100%;
-        // min-width: 400px;
         & .contenedor-1{
             width: 80%;
             margin: auto;

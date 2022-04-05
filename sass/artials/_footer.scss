@@ -18,6 +18,9 @@
         & a img{
             width: 50px;
         }
+        & a:hover{
+            border-bottom: 1px solid $principal;
+        }
     }
 }
 

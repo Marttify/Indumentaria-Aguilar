@@ -5,19 +5,18 @@ $secondary: #fff;
 $font-primary: "Inter", sans-serif;
 $font-secondary: "Bowly One SC", cursive;
 $third: rgba(246, 233, 233, 0.42);
-$third: none;
-
 $font-third: 'Roboto Mono', monospace;
 $lyrics: red;
 
+
 // Maps
+
 $spacings:(
     xlarge: 5rem,
     large: 3rem,
     medium: 2rem,
     small: 1.5rem,
     xsmall: 1rem,
-
 );
 
 @each $var, $val in $spacings {
@@ -25,7 +24,10 @@ $spacings:(
         padding: #{$val};
     }
 }
+
+
 // map-geto
+
 $Estilos:(
     color: gray,
     t-a: center,
@@ -33,10 +35,7 @@ $Estilos:(
     pdng:1rem
 );
 
-
-
-
-// Bucles
+// Bucles global
 
 @for $i from 1 to 5{
     .contenedor-#{$i}{

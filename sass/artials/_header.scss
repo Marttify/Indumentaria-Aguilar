@@ -47,9 +47,7 @@
             & .navBar__Items{
                 margin: 0%;
                 padding: 0%;
-                border: none;
-                display: flex;
-                justify-content: end;
+                @include flex(default, end, default, default);
                 & a{
                     color: $principal;
                     display: inline-block;
@@ -59,15 +57,6 @@
                         border-bottom: 2px solid $lyrics;
                         transition: 0.2s;
                         color: $lyrics;
-                    }
-                }
-                & .log__In{
-                    padding: 0px 1em;
-                    margin: 5px 10px;
-                    border-radius: 5px;
-                    border: 2px solid black;
-                    &:hover{
-                        background-color: $secondary;
                     }
                 }
             }

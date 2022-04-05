@@ -16,18 +16,14 @@
 html{
     font-family: $font-primary;
     color: map-get($map:$Estilos , $key:color );
-    margin: 0;
+    margin: 0%;
     padding: 0%;
 
 }
-
-
 a{
-    color: inherit;
+    list-style-type: none;
     text-decoration: none;
-    &:hover{
-        border-bottom: 1px solid black;
-    }
+    color: $principal;
 }
 body{
     margin: 0%;
