@@ -34,13 +34,15 @@
         width: 100%;
         & div{
             width: 100%;
-            margin: 2rem 0;
+            margin: 2rem a;
             & p{
-                margin: auto;
+                margin: 1rem auto 3rem;
+                font-size: large;
             }
             & .list{
-                margin: 1rem 0;
-                text-align: left;
+                width: 35%;
+                margin: 1rem auto 3rem;
+                text-align: center;
             }
         }
         & p{
@@ -67,9 +69,13 @@
         text-align: left;
         margin: auto;
         width: 100%;
+        & h3{
+            margin-bottom: 2rem;
+        }
         & div ul{
             text-align: map-get($map:$spacings, $key:t-a);
-            margin: auto;
+            margin: 0rem auto 3rem;
+            padding-left: 1.5rem;
         }
     }
 }
