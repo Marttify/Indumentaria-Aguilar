@@ -15,7 +15,6 @@
     .contenedor-#{$var}{
         background-color: $secondary;
         color: $principal;
-        margin-bottom: 1rem;
         & a img{
             width: 50px;
         }
@@ -29,7 +28,7 @@
 @media (max-width: 768px){
     .footer{
         display: grid;
-        grid-template-columns: repeat(1,100%);
+        grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(4,auto);
         grid-template-areas:
         "contenedor-a"
@@ -38,7 +37,33 @@
         "contenedor-d"
         ;
         padding: 0%;
-        margin: 1rem auto;
+        text-align: center
+    }
+}
+
+@media (max-width: 465px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "contenedor-a"
+        "contenedor-b"
+        "contenedor-c"
+        "contenedor-d"
+        ;
+        & .contenedor-a{
+            & .mail{
+                & a{
+                    display: none;
+                }
+            } 
+            & .ubicacion{
+                & a{
+                    display: none;
+                }
+            } 
+        }
         text-align: center
     }
 }

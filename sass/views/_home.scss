@@ -1,11 +1,9 @@
-
 /* start of index(home) */
-
 
 .main__Description{
     display: grid;
     grid-template-columns: repeat(4,25%);
-    grid-template-rows: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
     grid-template-areas: 
     ". text frame ."
     ". section section .";
@@ -14,38 +12,51 @@
     justify-content: center;
     padding-top: 6em;
     color: $principal;
+    height: 85vh;
     & .text{
         grid-area: text;
-        @include flex(column, center, center, 1rem );
+        width: 100%;
+        @include flex(column, space-around, center, 1rem );
+        font-size: 1vw;
         & a{
             padding: 0px 1rem;
             margin: 1rem;
             &:hover{
                 color: $lyrics;
-                border-bottom: 1px solid $lyrics;
             }
         }
     }
     & .frame{
         grid-area: frame;
+        width: 100%;
+        margin: auto;
         & img{
+            margin: auto;
             width: 100%;
             border-radius: 1rem;
         }
     }
     & .section{
+        width: 100%;
         grid-area: section;
         background-color: $secondary;
         padding: 2em;
         font-size: 18px;
         text-align: center;
-        margin-bottom: 10rem;
     }
 }
 
 // start of media query in the index
-
-@media (max-width: 768px){
+@media (max-width: 1400px){
+    .main__Description{
+        height: auto;
+        & .section{
+            font-size: large;
+            margin-bottom: 12rem;
+        }
+    }
+}
+@media (max-width: 865px){
     .main__Description{
         display: grid;
         grid-template-columns: repeat(1,100%);
@@ -54,17 +65,36 @@
         "text"
         "frame"
         "section";
-        gap: 1rem;
+        gap: 0px;
         margin: auto;
+        width: 100%;
         & .text{
-            margin: 2rem;
+            margin: 1rem 0%;
+            font-size: 3vw;
         }
         & .frame img{
             width: 80%;
-            margin: 2rem;
+            margin: 2rem 0%;
         }
         & .section{
-            margin: 2rem;
+            margin: 2rem 0%;
+            width: 80%;
+            margin: auto;
+            font-size: large;
+        }
+    }
+}
+@media (max-width: 500px){
+    .main__Description{
+        width: 100%;
+        margin: auto;
+        min-width: 385px;
+        & .text{
+            font-size: 4vw;
+        }
+        & .section{
+            width: 80%;
+            font-size: small;
         }
     }
 }
